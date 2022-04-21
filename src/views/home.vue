@@ -1,5 +1,5 @@
 <template>
-  <div><el-button type="danger">按钮</el-button></div>
+  <h1 class="text-10xl font-bold bg-pink-500 hover:bg-purple-500">Hello world!</h1>
 </template>
 
 <script lang="ts" setup>

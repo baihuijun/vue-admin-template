@@ -3,8 +3,8 @@ import router, { setupRouter } from './router'
 import { setupPlugins } from './plugins'
 import { setupStore } from './store'
 import App from './App.vue'
+import './styles/tailwind.css'
 import './styles/index.scss'
-
 async function bootstrap() {
   const app = createApp(App)
   setupRouter(app)

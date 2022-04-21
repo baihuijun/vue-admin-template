@@ -3,7 +3,6 @@ import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import svgLoader from 'vite-svg-loader'
-import WindiCSS from 'vite-plugin-windicss'
 import ElementPlus from 'unplugin-element-plus/vite'
 import removeConsole from 'vite-plugin-remove-console'
 import vue from '@vitejs/plugin-vue'
@@ -16,7 +15,6 @@ export default ({ command }: ConfigEnv) => {
       vue(),
       svgLoader(),
       ElementPlus(),
-      WindiCSS(),
       removeConsole(),
       viteMockServe({
         mockPath: 'mock',
