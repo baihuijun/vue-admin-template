@@ -1,5 +1,5 @@
 <template>
-  <div>首页</div>
+  <div><el-button type="danger">按钮</el-button></div>
 </template>
 
 <script lang="ts" setup>

@@ -47,6 +47,7 @@ const onLogin = async (): Promise<void> => {
     username: user.value,
     password: pwd.value
   })
+  console.log(res)
   // storageSession.setItem('info', {
   //   username: 'admin',
   //   accessToken: 'eyJhbGciOiJIUzUxMiJ9.test'
@@ -54,7 +55,7 @@ const onLogin = async (): Promise<void> => {
   initRouter('admin').then(res => {
     console.log(res)
   })
-  // router.push('/')
+  router.push('/')
 }
 
 function onUserFocus() {

@@ -5,8 +5,6 @@ import { setupStore } from './store'
 import App from './App.vue'
 import './styles/index.scss'
 
-
-
 async function bootstrap() {
   const app = createApp(App)
   setupRouter(app)

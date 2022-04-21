@@ -30,6 +30,7 @@ module.exports = {
     'require-prop-type-constructor': 'off',
     'vue/require-prop-type-constructor': 'off',
     'vue/no-async-in-computed-properties': 'off',
+    'vue/multi-word-component-names': 0,
     'no-extend-native': 'off',
     'no-var': 'off',
     'vue/no-unused-components': 'off',
@@ -43,8 +44,6 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false, classes: false }],
     'no-empty-function': ['error', { allow: ['functions', 'methods'] }],
     // 'space-before-function-paren': 2,
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-unused-vars': 'off',
     'comma-dangle': ['error', 'never'] //是否允许对象中出现结尾逗号
   },
