@@ -4,6 +4,7 @@ overrides:
   bin-wrapper: npm:bin-wrapper-china
 
 specifiers:
+  '@element-plus/icons-vue': ^1.1.4
   '@types/lodash': ^4.14.182
   '@types/node': ^17.0.25
   '@types/nprogress': ^0.2.0
@@ -22,6 +23,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^8.6.0
   lodash: ^4.17.21
+  mitt: ^3.0.0
   mockjs: ^1.1.0
   nprogress: ^0.2.0
   pinia: ^2.0.13
@@ -42,10 +44,12 @@ specifiers:
   vue-tsc: ^0.34.7
 
 dependencies:
+  '@element-plus/icons-vue': 1.1.4_vue@3.2.33
   '@vueuse/motion': 2.0.0-beta.12_vue@3.2.33
   axios: 0.26.1
   element-plus: 2.1.10_vue@3.2.33
   lodash: 4.17.21
+  mitt: 3.0.0
   mockjs: 1.1.0
   nprogress: 0.2.0
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
@@ -2999,6 +3003,10 @@ packages:
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
+
+  /mitt/3.0.0:
+    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
+    dev: false
 
   /mockjs/1.1.0:
     resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}

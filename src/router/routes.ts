@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from 'vue-router'
-
+import layout from '@/layout/index.vue'
 const routes = [
   {
     path: '/login',
@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/home.vue')
+    component: layout
   }
 ] as RouteRecordRaw[]
 

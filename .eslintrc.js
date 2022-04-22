@@ -20,7 +20,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/no-explicit-any': ['off'],
     '@typescript-eslint/indent': ['off'],
-    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/no-unused-vars': ['off'],
     'no-useless-escape': 'off',
     'prefer-rest-params': 'off',
     'no-tabs': 'off',
