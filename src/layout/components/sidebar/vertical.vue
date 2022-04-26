@@ -1,8 +1,12 @@
 <template>
+  <div class="app-logo">
+    <img src="@/assets/logo.png" alt="" />
+    <span v-if="!isCollapse" class="text-white font-bold pl-5">Admin</span>
+  </div>
   <el-menu
     default-active="2"
     class="el-menu-vertical"
-    background-color="#545c64"
+    background-color="#1e272e"
     text-color="#fff"
     active-text-color="#ffd04b"
     :collapse="isCollapse"
@@ -61,9 +65,25 @@ const handleClose = (key: string, keyPath: string[]) => {
 }
 </script>
 
-<style>
+<style lang="scss">
 .el-menu-vertical {
   width: 250px;
-  height: 100vh;
+  padding-top: 50px;
+}
+.el-menu.el-menu-vertical {
+  border: none;
+}
+.app-logo {
+  width: 100%;
+  height: 50px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  img {
+    width: 48px;
+    height: 48px;
+  }
 }
 </style>

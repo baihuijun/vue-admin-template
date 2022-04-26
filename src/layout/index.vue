@@ -24,7 +24,16 @@ import AppHeader from './components/appHeader.vue'
 .el-container {
   height: 100vh;
 }
+.el-header {
+  background-color: #e74c3c;
+}
+.el-main {
+  // background-color: #bdc3c7;
+  padding: 0;
+}
 .el-aside {
-  background-color: pink;
+  background-color: #1e272e;
+  position: relative;
+  overflow-x: hidden;
 }
 </style>

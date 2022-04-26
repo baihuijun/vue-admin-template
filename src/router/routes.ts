@@ -9,7 +9,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: layout
+    component: layout,
+    children: [
+      {
+        path: 'welcome',
+        name: 'welcome',
+        component: () => import('@/views/welcome.vue')
+      }
+    ]
   }
 ] as RouteRecordRaw[]
 

@@ -116,11 +116,17 @@ function onPwdBlur() {
           }"
         >
           <div class="icon">
-            <!-- <IconifyIconOffline icon="fa-user" width="14" height="14" /> -->
+            <el-icon><User /></el-icon>
           </div>
           <div>
             <h5>用户名</h5>
-            <input type="text" class="input" v-model="user" @focus="onUserFocus" @blur="onUserBlur" />
+            <input
+              type="text"
+              class="input"
+              v-model="user"
+              @focus="onUserFocus"
+              @blur="onUserBlur"
+            />
           </div>
         </div>
         <div
@@ -139,11 +145,17 @@ function onPwdBlur() {
           }"
         >
           <div class="icon">
-            <!-- <IconifyIconOffline icon="fa-lock" width="14" height="14" /> -->
+            <el-icon><lock /></el-icon>
           </div>
           <div>
             <h5>密码</h5>
-            <input type="password" class="input" v-model="pwd" @focus="onPwdFocus" @blur="onPwdBlur" />
+            <input
+              type="password"
+              class="input"
+              v-model="pwd"
+              @focus="onPwdFocus"
+              @blur="onPwdBlur"
+            />
           </div>
         </div>
         <button
