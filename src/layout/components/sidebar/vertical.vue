@@ -6,9 +6,9 @@
   <el-menu
     default-active="2"
     class="el-menu-vertical"
-    background-color="#1e272e"
+    background-color="#3498db"
     text-color="#fff"
-    active-text-color="#ffd04b"
+    active-text-color="#f1c40f"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"

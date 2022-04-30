@@ -32,7 +32,7 @@ import AppHeader from './components/appHeader.vue'
   padding: 0;
 }
 .el-aside {
-  background-color: #1e272e;
+  background-color: #3498db;
   position: relative;
   overflow-x: hidden;
 }
