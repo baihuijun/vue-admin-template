@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios"
+import axios, { AxiosRequestConfig } from 'axios'
 import NProgress from '@/utils/progress'
 class Axios {
   private instance
@@ -7,6 +7,7 @@ class Axios {
     this.interceptors()
   }
   public request<T, D = ResponseResult<T>>(config: AxiosRequestConfig) {
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async (resolve, reject) => {
       try {
         const response = await this.instance.request<D>(config)
@@ -21,21 +22,27 @@ class Axios {
     this.interceptorsResponse()
   }
   private interceptorsRequest() {
-    this.instance.interceptors.request.use((config) => {
-      NProgress.start()
-      return config;
-    }, (error) => {
-      return Promise.reject(error);
-    });
+    this.instance.interceptors.request.use(
+      config => {
+        NProgress.start()
+        return config
+      },
+      error => {
+        return Promise.reject(error)
+      }
+    )
   }
   private interceptorsResponse() {
-    this.instance.interceptors.response.use((response) => {
-      NProgress.done()
-      return response;
-    }, (error) => {
-      NProgress.done()
-      return Promise.reject(error);
-    });
+    this.instance.interceptors.response.use(
+      response => {
+        NProgress.done()
+        return response
+      },
+      error => {
+        NProgress.done()
+        return Promise.reject(error)
+      }
+    )
   }
 }
 export default Axios

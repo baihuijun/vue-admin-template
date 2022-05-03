@@ -12,15 +12,14 @@ export function getUserInfo() {
     url: 'getUserInfo',
     params: {}
   })
-
 }
 
 interface LoginInterface {
-  username: string,
+  username: string
   password: string
 }
 interface LoginResultInterface {
-  token: string,
+  token: string
 }
 
 export function login(data: LoginInterface) {

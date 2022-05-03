@@ -1,4 +1,4 @@
-import http from "@/plugins/axios";
+import http from '@/plugins/axios'
 
 export function getAsyncRoutes(params: any) {
   return http.request({
