@@ -42,7 +42,15 @@ import {
   ElLoading,
   ElInfiniteScroll
 } from 'element-plus'
-import { Fold, Expand, User, Lock, SwitchButton } from '@element-plus/icons-vue'
+import {
+  Fold,
+  Expand,
+  User,
+  Lock,
+  SwitchButton,
+  Setting,
+  Check
+} from '@element-plus/icons-vue'
 // Directives
 const plugins = [ElLoading, ElInfiniteScroll]
 
@@ -90,7 +98,9 @@ const components = [
   Expand,
   User,
   Lock,
-  SwitchButton
+  SwitchButton,
+  Setting,
+  Check
 ]
 
 export default function setupElementPlus(app: App) {
