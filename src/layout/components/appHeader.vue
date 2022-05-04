@@ -5,7 +5,6 @@ import { themeColorsType } from '@/layout/type'
 import { useAppStoreHook } from '@/store/modules/app'
 import { computed, ref, unref, reactive, toRefs } from 'vue'
 import acatarPng from '@/assets/avatars.jpg'
-import { stringify } from 'querystring'
 const useApp = useAppStoreHook()
 const router = useRouter()
 const showIcon = computed(() => {
