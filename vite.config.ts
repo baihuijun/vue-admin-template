@@ -6,6 +6,10 @@ import svgLoader from 'vite-svg-loader'
 import ElementPlus from 'unplugin-element-plus/vite'
 import removeConsole from 'vite-plugin-remove-console'
 import { themePreprocessorPlugin } from '@zougt/vite-plugin-theme-preprocessor'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { genScssMultipleScopeVars } from '/@/layout/theme'
+
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
@@ -14,6 +18,10 @@ export default ({ command }: ConfigEnv) => {
     base: './',
     plugins: [
       vue(),
+      Components({
+        // 按需导入element-plus组件
+        resolvers: [ElementPlusResolver({ importStyle: 'sass' })]
+      }),
       svgLoader(),
       ElementPlus(),
       removeConsole(),
@@ -77,17 +85,17 @@ export default ({ command }: ConfigEnv) => {
             }
           ],
           // // 默认取 multipleScopeVars[0].scopeName
-          // defaultScopeName: "",
+          defaultScopeName: '',
           // 在生产模式是否抽取独立的主题css文件，extract为true以下属性有效
-          extract: false
+          extract: false,
           // // 独立主题css文件的输出路径，默认取 viteConfig.build.assetsDir 相对于 (viteConfig.build.outDir)
-          // outputDir: "",
+          outputDir: '',
           // // 会选取defaultScopeName对应的主题css文件在html添加link
           // themeLinkTagId: "theme-link-tag",
           // // "head"||"head-prepend" || "body" ||"body-prepend"
           // themeLinkTagInjectTo: "head",
           // // 是否对抽取的css文件内对应scopeName的权重类名移除
-          // removeCssScopeName: false,
+          removeCssScopeName: false
         }
       })
     ],

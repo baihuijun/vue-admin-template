@@ -6,7 +6,7 @@
   <el-menu
     default-active="2"
     class="el-menu-vertical"
-    background-color="#3498db"
+    background-color="transparent"
     text-color="#fff"
     active-text-color="#f1c40f"
     :collapse="isCollapse"

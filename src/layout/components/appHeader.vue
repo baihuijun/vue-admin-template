@@ -4,6 +4,8 @@ import { ClickOutside as vClickOutside } from 'element-plus'
 import { themeColorsType } from '@/layout/type'
 import { useAppStoreHook } from '@/store/modules/app'
 import { computed, ref, unref, reactive, toRefs } from 'vue'
+import { toggleTheme } from '@zougt/vite-plugin-theme-preprocessor/dist/browser-utils'
+
 import acatarPng from '@/assets/avatars.jpg'
 const useApp = useAppStoreHook()
 const router = useRouter()
@@ -49,8 +51,16 @@ let themeColors = ref<Array<themeColorsType>>([
   // 深紫罗兰色
   { color: '#722ed1', themeColor: 'saucePurple' }
 ])
+
+const str = ref('theme-default')
+
 const handleSetTheme = (themeColor: string) => {
   layoutTheme.value.theme = themeColor
+  str.value = str.value === 'theme-default' ? 'theme-mauve' : 'theme-default'
+  toggleTheme({
+    // scopeName: 'theme-mauve'
+    scopeName: str.value === 'theme-default' ? 'theme-mauve' : 'theme-default'
+  })
 }
 
 const setCheckColor = computed(() => {

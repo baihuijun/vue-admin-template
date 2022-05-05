@@ -8,12 +8,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import forms from '@/components/forms.vue'
-import { toggleTheme } from '@zougt/vite-plugin-theme-preprocessor/dist/browser-utils'
 
-toggleTheme({
-  scopeName: 'theme-mauve'
-  // scopeName:'theme-default'
-})
 // toggleTheme({
 //   scopeName: 'theme-mauve'
 //   // scopeName: 'theme-default'
@@ -33,6 +28,6 @@ toggleTheme({
 }
 .box {
   height: 50px;
-  background-color: $color-primary;
+  background-color: var(--el-color-primary);
 }
 </style>

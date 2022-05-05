@@ -25,14 +25,14 @@ import AppHeader from './components/appHeader.vue'
   height: 100vh;
 }
 .el-header {
-  background-color: #e74c3c;
+  background-color: var(--el-color-primary);
 }
 .el-main {
   // background-color: #bdc3c7;
   padding: 0;
 }
 .el-aside {
-  background-color: #3498db;
+  background-color: var(--el-color-primary);
   position: relative;
   overflow-x: hidden;
 }
