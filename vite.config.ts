@@ -115,6 +115,7 @@ export default ({ command }: ConfigEnv) => {
           assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
         }
       }
+      // outDir: 'test'  打包后文件的名称 默认dist
     },
     resolve: {
       alias: {
