@@ -3,12 +3,11 @@ import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import svgLoader from 'vite-svg-loader'
-import ElementPlus from 'unplugin-element-plus/vite'
 import removeConsole from 'vite-plugin-remove-console'
 import { themePreprocessorPlugin } from '@zougt/vite-plugin-theme-preprocessor'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import { genScssMultipleScopeVars } from '/@/layout/theme'
 
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
@@ -18,12 +17,22 @@ export default ({ command }: ConfigEnv) => {
     base: './',
     plugins: [
       vue(),
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+        imports: ['vue', 'vue-router'],
+        //为true时在项目根目录自动创建
+        dts: 'types/auto-imports.d.ts'
+      }),
       Components({
         // 按需导入element-plus组件
-        resolvers: [ElementPlusResolver({ importStyle: 'sass' })]
+        resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
+        dirs: ['src/components'],
+        //组件名称包含目录，防止同名组件冲突
+        directoryAsNamespace: true,
+        //指定类型声明文件，为true时在项目根目录创建
+        dts: 'types/components.d.ts'
       }),
       svgLoader(),
-      ElementPlus(),
       removeConsole(),
       viteMockServe({
         mockPath: 'mock',

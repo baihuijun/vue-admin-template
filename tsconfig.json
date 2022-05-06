@@ -8,19 +8,24 @@
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
-    "suppressImplicitAnyIndexErrors": true,
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
-    "paths":{
-      "@/*":["./src/*"]
+    "paths": {
+      "@/*": ["./src/*"],
+      "#/*": ["./types/*"]
     },
-    "skipLibCheck": true,
-    "types": ["node", "vite/client", "element-plus/global"],
-    "typeRoots": ["./node_modules/@types/", "./types"]
+    "types": ["element-plus/global", "echarts", "lodash"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","types/**/*.d.ts","mock/**/*.ts"],
-  "exclude": ["node_modules","dist"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "vite.config.ts",
+    "vite/**/*.ts",
+    "mock/**/*.ts",
+    "types/**/*.d.ts",
+    "types/**/*.ts"
+  ]
 }

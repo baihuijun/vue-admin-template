@@ -33,7 +33,7 @@ specifiers:
   sass: ^1.50.1
   tailwindcss: ^3.0.24
   typescript: ^4.5.4
-  unplugin-element-plus: ^0.4.0
+  unplugin-auto-import: ^0.7.1
   unplugin-vue-components: ^0.19.3
   vite: ^2.9.5
   vite-plugin-compression: ^0.5.1
@@ -79,7 +79,7 @@ devDependencies:
   sass: 1.51.0
   tailwindcss: 3.0.24
   typescript: 4.6.4
-  unplugin-element-plus: 0.4.0_vite@2.9.7
+  unplugin-auto-import: 0.7.1_vite@2.9.7
   unplugin-vue-components: 0.19.3_vite@2.9.7+vue@3.2.33
   vite: 2.9.7_sass@1.51.0
   vite-plugin-compression: 0.5.1_vite@2.9.7
@@ -1709,10 +1709,6 @@ packages:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
     dependencies:
       is-arrayish: 0.2.1
-    dev: true
-
-  /es-module-lexer/0.10.5:
-    resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
     dev: true
 
   /esbuild-android-64/0.14.38:
@@ -4591,13 +4587,20 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-element-plus/0.4.0_vite@2.9.7:
-    resolution: {integrity: sha512-iE4EZu8pp5Vz/qb9r45sCNSz9Px6KOthBpe6gFBV1E60g9A45HS+JhwAaj4Zki8HZ0YGW3LyrsBCrd+XhOypnQ==}
-    engines: {node: '>=14.17.0'}
+  /unplugin-auto-import/0.7.1_vite@2.9.7:
+    resolution: {integrity: sha512-9865OV9eP99PNxHR2mtTDExeN01m4M9boT5U2BtIwsU1wDRsaFIYWLwcCBEjvXzXfTTC2NNMskhHGVAMfL2WgA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@vueuse/core': '*'
+    peerDependenciesMeta:
+      '@vueuse/core':
+        optional: true
     dependencies:
+      '@antfu/utils': 0.5.1
       '@rollup/pluginutils': 4.2.1
-      es-module-lexer: 0.10.5
+      local-pkg: 0.4.1
       magic-string: 0.26.1
+      resolve: 1.22.0
       unplugin: 0.6.2_vite@2.9.7
     transitivePeerDependencies:
       - esbuild

@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome bg-red-400 hover:bg-blue-600">欢迎界面</div>
+  <div class="welcome"></div>
 </template>
 
 <script lang="ts" setup>

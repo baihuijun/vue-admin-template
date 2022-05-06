@@ -1,13 +1,12 @@
 <template>
-  <div class="app-logo">
+  <!-- <div class="app-logo">
     <img src="@/assets/logo.png" alt="" />
     <span v-if="!isCollapse" class="text-white font-bold pl-5">Admin</span>
-  </div>
+  </div> -->
+  <div style="height: 68px; background-color: black"></div>
   <el-menu
-    default-active="2"
-    class="el-menu-vertical"
-    background-color="transparent"
-    text-color="#fff"
+    class="el-menu-vertical-box"
+    text-color="#000"
     active-text-color="#f1c40f"
     :collapse="isCollapse"
     @open="handleOpen"
@@ -35,7 +34,7 @@
       <el-icon><icon-menu /></el-icon>
       <template #title>Navigator Two</template>
     </el-menu-item>
-    <el-menu-item index="3" disabled>
+    <el-menu-item index="3">
       <el-icon><document /></el-icon>
       <template #title>Navigator Three</template>
     </el-menu-item>
@@ -66,21 +65,24 @@ const handleClose = (key: string, keyPath: string[]) => {
 </script>
 
 <style lang="scss">
-.el-menu-vertical {
-  width: 250px;
-  padding-top: 50px;
+.el-menu {
+  background-color: var(--el-color-primary);
 }
-.el-menu.el-menu-vertical {
+.el-menu-vertical-box {
   border: none;
+  user-select: none;
+}
+.el-menu-vertical-box:not(.el-menu--collapse) {
+  width: 250px;
 }
 .app-logo {
   width: 100%;
-  height: 50px;
+  height: 60px;
   padding: 0 5px;
   display: flex;
   align-items: center;
   position: absolute;
-  z-index: 99;
+  top: 0;
   img {
     width: 48px;
     height: 48px;
