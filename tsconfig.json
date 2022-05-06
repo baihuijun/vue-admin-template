@@ -15,6 +15,7 @@
       "@/*": ["./src/*"],
       "#/*": ["./types/*"]
     },
+    "skipLibCheck": true,
     "types": ["element-plus/global", "lodash"]
   },
   "include": [
@@ -27,5 +28,5 @@
     "mock/**/*.ts",
     "types/**/*.d.ts",
     "types/**/*.ts"
-  ]
+  ],
 }

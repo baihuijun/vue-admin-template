@@ -11,28 +11,28 @@ export const usePermissionStore = defineStore({
   }),
   actions: {
     // 获取异步路由菜单
-    asyncActionRoutes(routes) {
-      // if (this.wholeMenus.length > 0) return
-      // this.wholeMenus = filterTree(ascending(this.constantMenus.concat(routes)))
-      // this.menusTree = cloneDeep(
-      //   filterTree(ascending(this.constantMenus.concat(routes)))
-      // )
-      // const getButtonAuth = (arrRoutes: Array<RouteConfigs>) => {
-      //   if (!arrRoutes || !arrRoutes.length) return
-      //   arrRoutes.forEach((v: RouteConfigs) => {
-      //     if (v.meta && v.meta.authority) {
-      //       this.buttonAuth.push(...v.meta.authority)
-      //     }
-      //     if (v.children) {
-      //       getButtonAuth(v.children)
-      //     }
-      //   })
-      // }
-      // getButtonAuth(this.wholeMenus)
-    },
-    async changeSetting(routes) {
-      await this.asyncActionRoutes(routes)
-    }
+    // asyncActionRoutes(routes) {
+    //   // if (this.wholeMenus.length > 0) return
+    //   // this.wholeMenus = filterTree(ascending(this.constantMenus.concat(routes)))
+    //   // this.menusTree = cloneDeep(
+    //   //   filterTree(ascending(this.constantMenus.concat(routes)))
+    //   // )
+    //   // const getButtonAuth = (arrRoutes: Array<RouteConfigs>) => {
+    //   //   if (!arrRoutes || !arrRoutes.length) return
+    //   //   arrRoutes.forEach((v: RouteConfigs) => {
+    //   //     if (v.meta && v.meta.authority) {
+    //   //       this.buttonAuth.push(...v.meta.authority)
+    //   //     }
+    //   //     if (v.children) {
+    //   //       getButtonAuth(v.children)
+    //   //     }
+    //   //   })
+    //   // }
+    //   // getButtonAuth(this.wholeMenus)
+    // },
+    // async changeSetting(routes) {
+    //   await this.asyncActionRoutes(routes)
+    // }
   }
 })
 

@@ -4,13 +4,13 @@ import { usePermissionStoreHook } from '@/store/modules/permission'
 
 export const initRouter = (name: string) => {
   return new Promise(resolve => {
-    getAsyncRoutes({ name }).then(({ info }) => {
-      if (info.length === 0) {
-        usePermissionStoreHook().changeSetting(info)
-      } else {
-        console.log(222)
-      }
-    })
+    // getAsyncRoutes({ name }).then(({ info }) => {
+    //   if (info.length === 0) {
+    //     usePermissionStoreHook().changeSetting(info)
+    //   } else {
+    //     console.log(222)
+    //   }
+    // })
   })
 }
 
