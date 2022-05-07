@@ -31,7 +31,7 @@
       </el-sub-menu>
     </el-sub-menu>
     <el-menu-item index="2">
-      <el-icon><icon-menu /></el-icon>
+      <el-icon><Menu /></el-icon>
       <template #title>Navigator Two</template>
     </el-menu-item>
     <el-menu-item index="3">
@@ -46,13 +46,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
-import {
-  Document,
-  Location,
-  Menu as IconMenu,
-  Setting
-} from '@element-plus/icons-vue'
 import { useAppStoreHook } from '@/store/modules/app'
 const useApp = useAppStoreHook()
 const isCollapse = computed(() => useApp.sidebar.opened)

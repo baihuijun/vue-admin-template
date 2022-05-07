@@ -7,6 +7,9 @@
     <el-button type="danger">Danger</el-button>
 
     <div class="h-6 mt-6 bg-yellow-600 hover:bg-purple-600"></div>
+    <BaseTable></BaseTable>
+    <BaseForm></BaseForm>
+    <EButton></EButton>
   </div>
 </template>
 

@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import { useRouter } from 'vue-router'
 import { ClickOutside as vClickOutside } from 'element-plus'
 import { themeColorsType } from '@/layout/type'
 import { useAppStoreHook } from '@/store/modules/app'
-import { computed, ref, unref, reactive, toRefs } from 'vue'
 import { toggleTheme } from '@zougt/vite-plugin-theme-preprocessor/dist/browser-utils'
 
 import acatarPng from '@/assets/avatars.jpg'

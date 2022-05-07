@@ -18,7 +18,7 @@ export default ({ command }: ConfigEnv) => {
       vue(),
       AutoImport({
         resolvers: [ElementPlusResolver()],
-        imports: ['vue', 'vue-router'],
+        imports: ['vue', 'vue-router', 'pinia'],
         //为true时在项目根目录自动创建
         dts: 'types/auto-imports.d.ts'
       }),
@@ -26,6 +26,7 @@ export default ({ command }: ConfigEnv) => {
         // 按需导入element-plus组件
         resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
         dirs: ['src/components'],
+        // include: [/^\.\/Base.*?\/index.vue$/],
         //组件名称包含目录，防止同名组件冲突
         directoryAsNamespace: true,
         //指定类型声明文件，为true时在项目根目录创建

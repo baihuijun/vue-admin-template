@@ -5,6 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BaseForm: typeof import('./../src/components/BaseForm/index.vue')['default']
+    BaseTable: typeof import('./../src/components/BaseTable/index.vue')['default']
+    EButton: typeof import('./../src/components/EButton/index.vue')['default']
+    EButtonAa: typeof import('./../src/components/EButton/aa.vue')['default']
+    EButtonBb: typeof import('./../src/components/EButton/bb/index.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
