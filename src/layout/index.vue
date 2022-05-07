@@ -28,7 +28,7 @@ import AppHeader from './components/appHeader.vue'
   background-color: var(--el-color-primary);
 }
 .el-main {
-  padding: 0;
+  padding: 10px;
 }
 .el-aside {
   background-color: var(--el-color-primary);

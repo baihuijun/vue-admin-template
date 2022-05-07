@@ -6,3 +6,6 @@ html,body,#app {
   height: 100vh;
   width: 100vw;
 }
+#nprogress .bar {
+  background: var(--el-color-danger) !important; //自定义颜色
+}
