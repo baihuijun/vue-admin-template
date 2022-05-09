@@ -18,9 +18,15 @@ export const GlobalStore = defineStore({
     // element组件大小
     assemblySize: "default",
     // language
-    language: ""
+    language: "",
+    // theme
+    theme: "theme-default"
   }),
-  getters: {},
+  getters: {
+    effect(state) {
+      return state.theme === "theme-default" ? "dark" : "light"
+    }
+  },
   actions: {
     // set token
     setToken(token: string) {
@@ -37,6 +43,10 @@ export const GlobalStore = defineStore({
     // updateLanguage
     updateLanguage(language: string) {
       this.language = language
+    },
+    // setTheme
+    setTheme(theme: string) {
+      this.theme = theme
     }
   },
   persist: piniaPersistConfig("GlobalState")
@@ -45,7 +55,6 @@ export const GlobalStore = defineStore({
 const store = createPinia()
 store.use(piniaPersist)
 export function setupStore(app: App) {
-  // piniaPersist(持久化)
   app.use(store)
 }
 export { store }

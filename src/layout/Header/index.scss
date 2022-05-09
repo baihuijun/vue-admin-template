@@ -1,12 +1,12 @@
 .header {
-	border-bottom: 1px solid #f6f6f6;
+	border-bottom: 1px solid inherit;
+  box-shadow: var(--el-box-shadow);
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 15px;
 	height: 55px;
-	background-color: #fff;
 	.header-lf {
 		.collapse-icon {
 			font-size: 22px;
@@ -18,13 +18,11 @@
 		margin: 0 30px;
 		.icon-style {
 			font-size: 20px;
-			color: rgba(0, 0, 0, 0.75);
 			cursor: pointer;
 			margin: 0 22px 0 0;
 		}
 		.username {
 			font-size: 15px;
-			color: rgba(0, 0, 0, 0.75);
 			margin: 0 20px 0 0;
 		}
 		.avatar {

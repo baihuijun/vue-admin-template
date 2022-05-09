@@ -98,8 +98,8 @@ export default ({ command }: ConfigEnv) => {
               // varsContent:`@primary-color:${defaultPrimaryColor};`
             },
             {
-              scopeName: "theme-mauve",
-              path: path.resolve("src/theme/theme-mauve.scss")
+              scopeName: "theme-dark",
+              path: path.resolve("src/theme/theme-dark.scss")
             }
           ],
           // 【注意】 css中不是由主题色变量生成的颜色，也让它抽取到主题css内，可以提高权重
@@ -109,7 +109,7 @@ export default ({ command }: ConfigEnv) => {
             }
           ],
           // // 默认取 multipleScopeVars[0].scopeName
-          defaultScopeName: "",
+          defaultScopeName: "theme-default",
           // 在生产模式是否抽取独立的主题css文件，extract为true以下属性有效
           extract: false,
           // // 独立主题css文件的输出路径，默认取 viteConfig.build.assetsDir 相对于 (viteConfig.build.outDir)

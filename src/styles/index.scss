@@ -22,3 +22,6 @@ html,body,#app {
 	background-color: #dddee0;
 	border-radius: 20px;
 }
+.theme-dark:root {
+  --el-bg-color-overlay: #000
+}

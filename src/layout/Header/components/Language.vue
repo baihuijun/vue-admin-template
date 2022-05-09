@@ -1,6 +1,6 @@
 <template>
   <el-dropdown trigger="click" @command="handleSetLanguage">
-    <el-tooltip effect="dark" :content="$t('header.language')" placement="bottom">
+    <el-tooltip :effect="globalStore.effect" :content="$t('header.language')" placement="bottom">
       <!-- <i :class="'iconfont icon-zhongyingwen'" class="icon-style"></i> -->
       <el-icon :size="22" class="icon-style">
         <i-ic-outline-g-translate></i-ic-outline-g-translate>
@@ -31,7 +31,6 @@ const handleSetLanguage = (lang: string) => {
 }
 
 onMounted(() => {
-  console.log(language)
   handleSetLanguage(language.value || getBrowserLang())
 })
 </script>
