@@ -10,7 +10,7 @@ module.exports = {
         ".el-button": {
           "background-color": "var(--el-button-bg-color,var(--el-color-white))"
         }
-      });
+      })
     }
   ]
-};
+}

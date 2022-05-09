@@ -1,21 +1,21 @@
-import { RouteRecordRaw } from 'vue-router'
-import layout from '@/layout/index.vue'
+import { RouteRecordRaw } from "vue-router"
+import layout from "@/layout/index.vue"
 const routes = [
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/login.vue')
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/login.vue")
   },
   {
-    path: '/',
-    name: 'home',
-    redirect: '/welcome',
+    path: "/",
+    name: "home",
+    redirect: "/welcome",
     component: layout,
     children: [
       {
-        path: 'welcome',
-        name: 'welcome',
-        component: () => import('@/views/welcome.vue')
+        path: "welcome",
+        name: "welcome",
+        component: () => import("@/views/welcome.vue")
       }
     ]
   }

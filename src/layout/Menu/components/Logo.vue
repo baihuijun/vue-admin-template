@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ isCollapse: boolean }>();
+defineProps<{ isCollapse: boolean }>()
 </script>
 
 <style scoped lang="scss">

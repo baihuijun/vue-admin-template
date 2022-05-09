@@ -1,17 +1,17 @@
-import { ConfigEnv } from "vite";
-import { viteMockServe } from "vite-plugin-mock";
-import viteCompression from "vite-plugin-compression";
-import viteImagemin from "vite-plugin-imagemin";
-import svgLoader from "vite-svg-loader";
-import removeConsole from "vite-plugin-remove-console";
-import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor";
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-import Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
-import vue from "@vitejs/plugin-vue";
-import path from "path";
+import { ConfigEnv } from "vite"
+import { viteMockServe } from "vite-plugin-mock"
+import viteCompression from "vite-plugin-compression"
+import viteImagemin from "vite-plugin-imagemin"
+import svgLoader from "vite-svg-loader"
+import removeConsole from "vite-plugin-remove-console"
+import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor"
+import AutoImport from "unplugin-auto-import/vite"
+import Components from "unplugin-vue-components/vite"
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
+import Icons from "unplugin-icons/vite"
+import IconsResolver from "unplugin-icons/resolver"
+import vue from "@vitejs/plugin-vue"
+import path from "path"
 export default ({ command }: ConfigEnv) => {
   return {
     base: "./",
@@ -139,5 +139,5 @@ export default ({ command }: ConfigEnv) => {
         "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js"
       }
     }
-  };
-};
+  }
+}

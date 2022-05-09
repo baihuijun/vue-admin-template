@@ -23,11 +23,6 @@
 import Menu from "./Menu/index.vue"
 import Header from "./Header/index.vue"
 // import Footer from "./Footer/index.vue";
-import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"
-toggleTheme({
-  scopeName: "theme-mauve"
-  // scopeName: "theme-default"
-})
 </script>
 <style lang="scss" scoped>
 @import "./index.scss";
