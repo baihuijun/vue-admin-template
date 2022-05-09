@@ -1,4 +1,4 @@
 export type themeColorsType = {
-  color: string
-  themeColor: string
-}
+	color: string;
+	themeColor: string;
+};

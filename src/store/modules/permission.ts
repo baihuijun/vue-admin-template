@@ -1,8 +1,8 @@
-import { defineStore } from 'pinia'
-import { store } from '@/store'
-import { ascending, filterTree } from '@/router/utils'
+import { defineStore } from "pinia";
+import { store } from "@/store";
+import { ascending, filterTree } from "@/router/utils";
 export const usePermissionStore = defineStore({
-  id: 'permission',
+  id: "permission",
   state: () => ({
     // 静态路由生成的菜单
     // constantMenus,
@@ -34,8 +34,8 @@ export const usePermissionStore = defineStore({
     //   await this.asyncActionRoutes(routes)
     // }
   }
-})
+});
 
 export function usePermissionStoreHook() {
-  return usePermissionStore(store)
+  return usePermissionStore(store);
 }

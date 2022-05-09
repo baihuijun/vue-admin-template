@@ -1,38 +1,34 @@
-<script setup lang="ts">
-import Vertical from './components/sidebar/vertical.vue'
-import AppMain from './components/appMain.vue'
-import AppHeader from './components/appHeader.vue'
-</script>
-
 <template>
   <el-container>
-    <el-aside width="auto">
-      <Vertical></Vertical>
-    </el-aside>
+    <el-aside><Menu></Menu></el-aside>
     <el-container>
-      <el-header>
-        <AppHeader></AppHeader>
-      </el-header>
+      <el-header><Header></Header></el-header>
       <el-main>
-        <AppMain></AppMain>
+        <section class="main-box">
+          <router-view v-slot="{ Component, route }">
+            <transition appear name="fade-transform" mode="out-in">
+              <!-- <keep-alive :include="cacheRouter"> -->
+              <keep-alive>
+                <component :is="Component" :key="route.path"></component>
+              </keep-alive>
+            </transition>
+          </router-view>
+        </section>
       </el-main>
+      <!-- <el-footer><Footer></Footer></el-footer> -->
     </el-container>
   </el-container>
 </template>
-
+<script lang="ts" setup>
+import Menu from "./Menu/index.vue"
+import Header from "./Header/index.vue"
+// import Footer from "./Footer/index.vue";
+import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"
+toggleTheme({
+  scopeName: "theme-mauve"
+  // scopeName: "theme-default"
+})
+</script>
 <style lang="scss" scoped>
-.el-container {
-  height: 100vh;
-}
-.el-header {
-  background-color: var(--el-color-primary);
-}
-.el-main {
-  padding: 10px;
-}
-.el-aside {
-  background-color: var(--el-color-primary);
-  position: relative;
-  overflow-x: hidden;
-}
+@import "./index.scss";
 </style>
