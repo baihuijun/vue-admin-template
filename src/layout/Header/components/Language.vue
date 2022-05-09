@@ -1,7 +1,6 @@
 <template>
   <el-dropdown trigger="click" @command="handleSetLanguage">
-    <el-tooltip :effect="globalStore.effect" :content="$t('header.language')" placement="bottom">
-      <!-- <i :class="'iconfont icon-zhongyingwen'" class="icon-style"></i> -->
+    <el-tooltip :content="$t('header.language')" placement="bottom">
       <el-icon :size="22" class="icon-style">
         <i-ic-outline-g-translate></i-ic-outline-g-translate>
       </el-icon>

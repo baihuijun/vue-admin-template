@@ -1,6 +1,5 @@
 .header {
-	border-bottom: 1px solid inherit;
-  box-shadow: var(--el-box-shadow);
+	border-bottom: 1px solid var(--el-border-color-light);
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;

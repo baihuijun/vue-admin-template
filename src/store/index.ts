@@ -24,7 +24,7 @@ export const GlobalStore = defineStore({
   }),
   getters: {
     effect(state) {
-      return state.theme === "theme-default" ? "dark" : "light"
+      return state.theme === "theme-default" ? "light" : "dark"
     }
   },
   actions: {

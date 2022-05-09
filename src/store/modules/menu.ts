@@ -9,20 +9,14 @@ export const MenuStore = defineStore({
     // menu collapse
     isCollapse: false,
     // menu List
-    menuList: [
-      {
-        icon: "home-filled",
-        title: "首页",
-        path: "/welcome"
-      }
-    ]
+    menuList: []
   }),
   getters: {},
   actions: {
-    async setCollapse() {
+    setCollapse() {
       this.isCollapse = !this.isCollapse
     },
-    async setMenuList(menuList: Menu.MenuOptions[]) {
+    setMenuList(menuList: Menu.MenuOptions[]) {
       this.menuList = menuList
     }
   },

@@ -1,5 +1,5 @@
 import { createApp } from "vue"
-import router, { setupRouter } from "./router"
+import router, { setupRouter } from "./routers"
 import { setupPlugins } from "./plugins"
 import { setupStore } from "./store"
 import App from "./App.vue"

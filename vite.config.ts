@@ -15,6 +15,20 @@ import path from "path"
 export default ({ command }: ConfigEnv) => {
   return {
     base: "./",
+    // server config
+    server: {
+      host: "0.0.0.0", // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
+      cors: true
+      // https: false,
+      // 代理跨域
+      // proxy: {
+      //   "/api": {
+      //     target: "https://www.fastmock.site/mock/f81e8333c1a9276214bcdbc170d9e0a0",
+      //     changeOrigin: true,
+      //     rewrite: path => path.replace(/^\/api/, "")
+      //   }
+      // }
+    },
     plugins: [
       vue(),
       AutoImport({
@@ -109,7 +123,7 @@ export default ({ command }: ConfigEnv) => {
             }
           ],
           // // 默认取 multipleScopeVars[0].scopeName
-          defaultScopeName: "theme-default",
+          defaultScopeName: "",
           // 在生产模式是否抽取独立的主题css文件，extract为true以下属性有效
           extract: false,
           // // 独立主题css文件的输出路径，默认取 viteConfig.build.assetsDir 相对于 (viteConfig.build.outDir)

@@ -6,8 +6,18 @@ html,body,#app {
   height: 100%;
   width: 100%;
 }
-#nprogress .bar {
-  background: var(--el-color-danger) !important; //自定义颜色
+#nprogress {
+  .bar {
+    background: var(--el-color-danger) !important; //自定义颜色
+  }
+  .peg {
+    box-shadow: 0 0 10px  var(--el-color-danger), 0 0 5px  var(--el-color-danger) !important;
+  }
+  .spinner-icon {
+    border-top-color: var(--el-color-danger) !important;
+    border-left-color: var(--el-color-danger) !important;
+  }
+
 }
 
 /* scroll bar */
@@ -22,6 +32,7 @@ html,body,#app {
 	background-color: #dddee0;
 	border-radius: 20px;
 }
-.theme-dark:root {
-  --el-bg-color-overlay: #000
+.dark.theme-dark:root {
+  --el-bg-color-overlay: #000;
+  --el-bg-color:#000;
 }

@@ -22,6 +22,8 @@ declare module '@vue/runtime-core' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     IIcOutlineGTranslate: typeof import('~icons/ic/outline-g-translate')['default']
     IMajesticonsTShirtLine: typeof import('~icons/majesticons/t-shirt-line')['default']

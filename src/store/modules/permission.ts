@@ -1,6 +1,6 @@
-import { defineStore } from "pinia";
-import { store } from "@/store";
-import { ascending, filterTree } from "@/router/utils";
+import { defineStore } from "pinia"
+import { store } from "@/store"
+import { ascending, filterTree } from "@/routers/utils"
 export const usePermissionStore = defineStore({
   id: "permission",
   state: () => ({
@@ -34,8 +34,8 @@ export const usePermissionStore = defineStore({
     //   await this.asyncActionRoutes(routes)
     // }
   }
-});
+})
 
 export function usePermissionStoreHook() {
-  return usePermissionStore(store);
+  return usePermissionStore(store)
 }

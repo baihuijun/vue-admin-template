@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig } from 'axios'
-import NProgress from '@/utils/progress'
+import axios, { AxiosRequestConfig } from "axios"
+import NProgress from "@/config/nprogress"
 class Axios {
   private instance
   constructor(config: AxiosRequestConfig) {

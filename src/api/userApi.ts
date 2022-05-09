@@ -1,4 +1,4 @@
-import http from '@/plugins/axios'
+import http from "@/plugins/axios"
 
 interface UserInterFace {
   name: string
@@ -9,7 +9,7 @@ interface UserInterFace {
 
 export function getUserInfo() {
   return http.request<UserInterFace>({
-    url: 'getUserInfo',
+    url: "getUserInfo",
     params: {}
   })
 }
@@ -20,12 +20,13 @@ interface LoginInterface {
 }
 interface LoginResultInterface {
   token: string
+  menuList: any
 }
 
 export function login(data: LoginInterface) {
   return http.request<LoginResultInterface>({
-    url: '/login',
-    method: 'POST',
+    url: "/login",
+    method: "POST",
     data
   })
 }

@@ -14,10 +14,13 @@
 </template>
 
 <script setup lang="ts">
+const router = useRouter()
 const openDialog = (refName: string) => {
   console.log(refName)
 }
-const logout = () => {}
+const logout = () => {
+  router.push("/login")
+}
 </script>
 
 <style scoped lang="scss">
