@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ menuList: Menu.MenuOptions[] }>();
+defineProps<{ menuList: Menu.MenuOptions[] }>()
 </script>
 
 <style scoped lang="scss">

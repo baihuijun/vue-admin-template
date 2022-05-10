@@ -26,7 +26,6 @@ router.beforeEach((to, from, next) => {
   NProgress.start()
   // * 在跳转路由之前，清除所有的请求
   // axiosCanceler.removeAllPending()
-
   // * 判断当前路由是否需要访问权限
   if (!to.matched.some(record => record.meta.requiresAuth)) return next()
   // * 判断是否有Token
@@ -38,13 +37,11 @@ router.beforeEach((to, from, next) => {
     NProgress.done()
     return
   }
-
   let menuStore = MenuStore()
   let dynamicRouter = handleRouter(menuStore.menuList)
   // * Static Router(静态路由，必须配置首页地址，否则不能进首页获取菜单、按钮权限等数据)
   let staticRouter = [HOME_URL, "/403"]
   let routerList = dynamicRouter.concat(staticRouter)
-
   // * 如果访问的地址没有在路由表中重定向到403页面
   if (routerList.indexOf(to.path) !== -1) return next()
   next({

@@ -11,5 +11,4 @@ const filterKeepAlive = (_route: RouteRecordRaw[], _cache: RouteRecordName[]): v
 }
 
 filterKeepAlive(routerArray, cacheRouter)
-
 export default cacheRouter

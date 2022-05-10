@@ -1,39 +1,12 @@
-// import { RouteRecordRaw } from "vue-router"
-// import layout from "@/layout/index.vue"
-// const routes = [
-//   {
-//     path: "/login",
-//     name: "login",
-//     component: () => import("@/views/login.vue")
-//   },
-//   {
-//     path: "/",
-//     name: "home",
-//     redirect: "/welcome",
-//     component: layout,
-//     children: [
-//       {
-//         path: "welcome",
-//         name: "welcome",
-//         component: () => import("@/views/welcome.vue")
-//       }
-//     ]
-//   }
-// ] as RouteRecordRaw[]
-
-// export default routes
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
 import pack from "../../package.json"
 
-// * 导入所有router
+// * 导入所有modules里面的router
 const metaRouters = import.meta.globEager("./modules/*.ts")
-
 // * 处理路由
 export const routerArray: RouteRecordRaw[] = []
-Object.keys(metaRouters).forEach(item => {
-  Object.keys(metaRouters[item]).forEach((key: any) => {
-    routerArray.push(...metaRouters[item][key])
-  })
+Object.entries(metaRouters).forEach(([, module]) => {
+  routerArray.push(...module.default)
 })
 
 const routes: RouteRecordRaw[] = [
@@ -51,12 +24,12 @@ const routes: RouteRecordRaw[] = [
       key: "login"
     }
   },
-  ...routerArray
-  // {
-  //   // 找不到路由重定向到404页面
-  //   path: "/:pathMatch(.*)",
-  //   redirect: { name: "404" }
-  // }
+  ...routerArray,
+  {
+    // 找不到路由重定向到404页面
+    path: "/:pathMatch(.*)",
+    redirect: { name: "404" }
+  }
 ]
 
 const router = createRouter({

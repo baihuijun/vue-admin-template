@@ -41,7 +41,7 @@ export const TabsStore = defineStore({
           router.push(nextTab.path)
         })
       }
-      this.tabsMenuValue = tabsMenuValue
+      this.setTabsMenuValue(tabsMenuValue)
       this.tabsMenuList = tabsMenuList.filter(item => item.path !== tabPath)
     },
     // Change Tabs
