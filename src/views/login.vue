@@ -49,7 +49,6 @@ const onLogin = async (): Promise<void> => {
     const { token, menuList } = res.result
     globalStore.setToken(token)
     menuStore.setMenuList(menuList)
-    // @ts-ignore：无法被执行的代码的错误
     ElMessage({
       message: res.message,
       type: "success"

@@ -34,10 +34,12 @@
       margin-right: 10px;
       padding: 0 10px;
       background-color: var(--el-text-color-primary);
+      user-select: none;
 		}
+    .el-tabs__nav-wrap > .el-tabs__nav-prev,.el-tabs__nav-next {
+      line-height: 31px;
+    }
 		.el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
-			// color: var(--el-color-primary);
-			// border-bottom: 2px solid var(--el-color-primary);
       background-color: var(--el-color-primary);
 		}
 	}
