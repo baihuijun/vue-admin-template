@@ -1,6 +1,7 @@
 interface ResponseResult<T> {
+  [x: string]: { access_token: any }
+  data: any
   code: number
-  message: string
-  success: true | false
+  msg: string
   result: T
 }

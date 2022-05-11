@@ -1,14 +1,11 @@
 <template>
   <div class="logo flex justify-center items-center">
-    <el-icon :size="30" class="imgIcon">
-      <logoSvg />
-    </el-icon>
+    <img src="@/assets/images/logo.svg" alt="" />
     <span v-show="!isCollapse">Geeker Admin</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import logoSvg from "@/assets/images/logo.svg"
 defineProps<{ isCollapse: boolean }>()
 </script>
 

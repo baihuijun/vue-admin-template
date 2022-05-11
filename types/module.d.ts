@@ -8,13 +8,13 @@ declare module "*.vue" {
   export default component
 }
 
-declare module "mockjs"
-
-declare module "vite-plugin-remove-console"
+declare module "nprogress"
 
 declare module "@zougt/vite-plugin-theme-preprocessor"
 
 declare module "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"
+
+declare module "js-md5"
 
 // * Menu
 declare namespace Menu {

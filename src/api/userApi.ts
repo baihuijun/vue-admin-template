@@ -1,26 +1,17 @@
 import http from "@/plugins/axios"
 
-interface UserInterFace {
-  name: string
-  age: number
-  avatar: string
-  permissions: string[]
-}
-
-export function getUserInfo() {
-  return http.request<UserInterFace>({
-    url: "getUserInfo",
-    params: {}
+export function getMenuList() {
+  return http.request<Menu.MenuOptions[]>({
+    url: "/menu/list",
+    method: "GET"
   })
 }
-
 interface LoginInterface {
   username: string
   password: string
 }
 interface LoginResultInterface {
-  token: string
-  menuList: any
+  access_token: string
 }
 
 export function login(data: LoginInterface) {

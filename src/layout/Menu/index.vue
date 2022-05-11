@@ -15,14 +15,14 @@ import { useRoute } from "vue-router"
 import { MenuStore } from "@/store/modules/menu"
 import Logo from "./components/Logo.vue"
 import SubItem from "./components/SubItem.vue"
-// import { getMenuList } from "@/api/modules/login";
+import { getMenuList } from "@/api/userApi"
 
 const route = useRoute()
 const menuStore = MenuStore()
 
 onMounted(async () => {
-  // const res = await getMenuList();
-  // res.data && menuStore.setMenuList(res.data);
+  const res = await getMenuList()
+  res.data && menuStore.setMenuList(res.data)
 })
 
 const activeMenu = computed((): string => route.path)

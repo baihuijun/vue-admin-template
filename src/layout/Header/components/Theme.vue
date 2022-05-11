@@ -1,9 +1,7 @@
 <template>
   <el-dropdown trigger="click" @command="handleSetTheme">
     <el-tooltip :content="$t('header.theme')" placement="bottom">
-      <el-icon :size="22" class="icon-style flex items-center">
-        <i-majesticons-t-shirt-line></i-majesticons-t-shirt-line>
-      </el-icon>
+      <i :class="'iconfont icon-zhuti'" class="icon-style" style="font-size: 26px"></i>
     </el-tooltip>
     <template #dropdown>
       <el-dropdown-menu>

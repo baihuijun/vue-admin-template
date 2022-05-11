@@ -9,17 +9,20 @@
   background-color: var(--el-bg-color-overlay);
 	.header-lf {
 		.collapse-icon {
-			font-size: 22px;
+			font-size: 24px;
 			margin-right: 20px;
 			cursor: pointer;
 		}
 	}
 	.header-ri {
 		margin: 0 30px;
+    .el-dropdown,.fullscreen {
+      margin-right: 22px;
+    }
 		.icon-style {
 			font-size: 20px;
 			cursor: pointer;
-			margin: 0 22px 0 0;
+			// margin: 0 22px 0 0;
 		}
 		.username {
 			font-size: 15px;

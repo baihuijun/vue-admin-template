@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 import pack from "../../package.json"
 
 // * 导入所有modules里面的router
@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/login",
     name: "login",
-    component: () => import("@/views/login.vue"),
+    component: () => import("@/views/login/index.vue"),
     meta: {
       requiresAuth: false,
       title: "登录页",
@@ -33,7 +33,8 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(pack.name),
+  // history: createWebHistory(pack.name),
+  history: createWebHashHistory(),
   routes,
   strict: false,
   // 切换页面，滚动到最顶部

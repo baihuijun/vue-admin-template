@@ -1,9 +1,6 @@
 <template>
   <el-tooltip :content="isFullscreen ? $t('header.exitFullScreen') : $t('header.fullScreen')" placement="bottom">
-    <el-icon :size="20" class="icon-style" @click="toggle">
-      <i-teenyicons-minimise-solid v-if="isFullscreen"></i-teenyicons-minimise-solid>
-      <i-teenyicons-expand-solid v-else></i-teenyicons-expand-solid>
-    </el-icon>
+    <i :class="['iconfont', isFullscreen ? 'icon-suoxiao' : 'icon-fangda']" class="icon-style" @click="toggle"></i>
   </el-tooltip>
 </template>
 
@@ -14,4 +11,7 @@ const { toggle, isFullscreen } = useFullscreen()
 
 <style scoped lang="scss">
 @import "../index.scss";
+.icon-style {
+  margin-right: 22px;
+}
 </style>

@@ -17,11 +17,12 @@
 			color: #dadada;
 			white-space: nowrap;
 		}
-		.imgIcon {
-			width: 30px;
-			object-fit: contain;
-			margin-right: 8px;
-		}
+    img {
+      width: 30px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      margin-right: 8px;
+    }
 	}
 	.el-scrollbar {
 		height: calc(100% - 55px);

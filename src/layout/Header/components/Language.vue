@@ -1,9 +1,7 @@
 <template>
   <el-dropdown trigger="click" @command="handleSetLanguage">
     <el-tooltip :content="$t('header.language')" placement="bottom">
-      <el-icon :size="22" class="icon-style">
-        <i-ic-outline-g-translate></i-ic-outline-g-translate>
-      </el-icon>
+      <i :class="'iconfont icon-zhongyingwen'" class="icon-style" style="font-size: 21px"></i>
     </el-tooltip>
     <template #dropdown>
       <el-dropdown-menu>

@@ -104,6 +104,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
+      // @ts-ignore # 忽视本行代码的小错误
       ElMessage.success("提交的数据为 : " + JSON.stringify(ruleForm))
     } else {
       console.log("error submit!", fields)

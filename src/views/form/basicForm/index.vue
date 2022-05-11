@@ -58,6 +58,7 @@ const formData = reactive({
 })
 
 const onSubmit = () => {
+  // @ts-ignore # 忽视本行代码的小错误
   ElMessage.success("提交的数据为 : " + JSON.stringify(formData))
 }
 </script>
