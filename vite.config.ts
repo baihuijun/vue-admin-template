@@ -6,12 +6,33 @@ import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
 import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
+import vueSetupExtend from "vite-plugin-vue-setup-extend"
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
 import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor"
 import { resolve } from "path"
+import pack from "./package.json"
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: `/${pack.name}/`,
+  build: {
+    outDir: pack.name, // 打包后文件的名称 默认dist
+    minify: "terser",
+    terserOptions: {
+      // delete console/debugger
+      compress: {
+        // drop_console: true,
+        drop_debugger: true
+      }
+    },
+    rollupOptions: {
+      output: {
+        // Static resource classification and packaging
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+        assetFileNames: "assets/[ext]/[name]-[hash].[ext]"
+      }
+    }
+  },
   server: {
     host: "0.0.0.0", // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
     cors: true,
@@ -27,7 +48,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src")
+      "@": resolve(__dirname, "./src"),
+      "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js"
     }
   },
   plugins: [
@@ -64,6 +86,7 @@ export default defineConfig({
       algorithm: "gzip",
       ext: ".gz"
     }),
+    vueSetupExtend(),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
@@ -130,24 +153,5 @@ export default defineConfig({
         removeCssScopeName: false
       }
     })
-  ],
-  build: {
-    // outDir: 'test'  打包后文件的名称 默认dist
-    minify: "terser",
-    terserOptions: {
-      // delete console/debugger
-      compress: {
-        // drop_console: true,
-        drop_debugger: true
-      }
-    },
-    rollupOptions: {
-      output: {
-        // Static resource classification and packaging
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
-        assetFileNames: "assets/[ext]/[name]-[hash].[ext]"
-      }
-    }
-  }
+  ]
 })

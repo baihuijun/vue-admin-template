@@ -6,10 +6,6 @@ import zhCn from "element-plus/lib/locale/lang/zh-cn"
 import en from "element-plus/lib/locale/lang/en"
 
 const globalStore = GlobalStore()
-// 配置element按钮文字中间是否有空格
-const config = reactive({
-  autoInsertSpace: false
-})
 
 // element 语言配置
 const i18nLocale = computed((): any => {
@@ -37,7 +33,7 @@ watch(
 </script>
 
 <template>
-  <el-config-provider :locale="i18nLocale" :button="config">
+  <el-config-provider :locale="i18nLocale">
     <router-view></router-view>
   </el-config-provider>
 </template>

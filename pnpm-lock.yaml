@@ -36,6 +36,7 @@ specifiers:
   vite: ^2.9.7
   vite-plugin-compression: ^0.5.1
   vite-plugin-imagemin: ^0.6.1
+  vite-plugin-vue-setup-extend: ^0.4.0
   vue: ^3.2.25
   vue-i18n: ^9.1.10
   vue-router: ^4.0.15
@@ -79,6 +80,7 @@ devDependencies:
   vite: 2.9.9_sass@1.51.0
   vite-plugin-compression: 0.5.1_vite@2.9.9
   vite-plugin-imagemin: 0.6.1_vite@2.9.9
+  vite-plugin-vue-setup-extend: 0.4.0_vite@2.9.9
   vue-tsc: 0.34.12_typescript@4.6.4
 
 packages:
@@ -4533,6 +4535,16 @@ packages:
       vite: 2.9.9_sass@1.51.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-vue-setup-extend/0.4.0_vite@2.9.9:
+    resolution: {integrity: sha512-WMbjPCui75fboFoUTHhdbXzu4Y/bJMv5N9QT9a7do3wNMNHHqrk+Tn2jrSJU0LS5fGl/EG+FEDBYVUeWIkDqXQ==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      '@vue/compiler-sfc': 3.2.33
+      magic-string: 0.25.9
+      vite: 2.9.9_sass@1.51.0
     dev: true
 
   /vite/2.9.9_sass@1.51.0:

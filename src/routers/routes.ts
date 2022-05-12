@@ -33,8 +33,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-  // history: createWebHistory(pack.name),
-  history: createWebHashHistory(),
+  history: createWebHashHistory(pack.name),
   routes,
   strict: false,
   // 切换页面，滚动到最顶部

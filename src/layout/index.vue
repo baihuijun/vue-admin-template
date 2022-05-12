@@ -17,7 +17,6 @@
           </router-view>
         </section>
       </el-main>
-      <!-- <el-footer><Footer></Footer></el-footer> -->
     </el-container>
   </el-container>
 </template>
@@ -26,8 +25,6 @@ import Menu from "./Menu/index.vue"
 import Header from "./Header/index.vue"
 import Tabs from "./Tabs/index.vue"
 import cacheRouter from "@/routers/cacheRouter"
-
-// import Footer from "./Footer/index.vue";
 </script>
 <style lang="scss" scoped>
 @import "./index.scss";
