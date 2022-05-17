@@ -42,6 +42,7 @@ watch(
   () => {
     let params = {
       title: route.meta.title as string,
+      name: route.name as string,
       path: route.path,
       close: true
     }

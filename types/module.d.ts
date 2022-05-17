@@ -20,6 +20,7 @@ declare module "js-md5"
 declare namespace Menu {
   interface MenuOptions {
     path: string
+    name: string
     title: string
     icon?: string
     isLink?: string

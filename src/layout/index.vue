@@ -10,7 +10,7 @@
         <section class="main-box">
           <router-view v-slot="{ Component, route }">
             <transition appear name="fade-transform" mode="out-in">
-              <keep-alive :include="cacheRouter">
+              <keep-alive :include="tabStore.curCacheRoute">
                 <component :is="Component" :key="route.path"></component>
               </keep-alive>
             </transition>
@@ -24,7 +24,8 @@
 import Menu from "./Menu/index.vue"
 import Header from "./Header/index.vue"
 import Tabs from "./Tabs/index.vue"
-import cacheRouter from "@/routers/cacheRouter"
+import { TabsStore } from "@/store/modules/tabs"
+const tabStore = TabsStore()
 </script>
 <style lang="scss" scoped>
 @import "./index.scss";

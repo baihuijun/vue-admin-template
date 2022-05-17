@@ -5,6 +5,7 @@
     <el-button type="info">Info</el-button>
     <el-button type="warning">Warning</el-button>
     <el-button type="danger">Danger</el-button>
+    <div class="h-5 bg-red-500 hover:bg-purple-600 mt-5"></div>
   </div>
 </template>
 

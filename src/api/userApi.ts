@@ -21,3 +21,10 @@ export function login(data: LoginInterface) {
     data
   })
 }
+export function getUserTableList(data: any) {
+  return http.request({
+    url: "/user/list",
+    method: "POST",
+    data
+  })
+}

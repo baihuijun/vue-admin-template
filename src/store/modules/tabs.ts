@@ -4,14 +4,19 @@ import { TabsState } from "../interface"
 import piniaPersistConfig from "@/config/piniaPersist"
 import { HOME_URL, TABS_BLACK_LIST } from "@/config/config"
 import router from "@/routers/index"
-
+import cacheRouter from "@/routers/cacheRouter"
 export const TabsStore = defineStore({
   id: "TabsState",
   state: (): TabsState => ({
     tabsMenuValue: HOME_URL,
-    tabsMenuList: [{ title: "首页", path: HOME_URL, icon: "home-filled", close: false }]
+    tabsMenuList: [{ title: "首页", name: "home", path: HOME_URL, icon: "home-filled", close: false }]
   }),
-  getters: {},
+  getters: {
+    curCacheRoute(state) {
+      // tab标签关闭后 销毁组件缓存
+      return cacheRouter.filter(route => state.tabsMenuList.find(ite => ite.name === route))
+    }
+  },
   actions: {
     // Add Tabs
     async addTabs(tabItem: Menu.MenuOptions) {
@@ -19,6 +24,7 @@ export const TabsStore = defineStore({
       if (TABS_BLACK_LIST.includes(tabItem.path)) return
       const tabInfo: Menu.MenuOptions = {
         title: tabItem.title,
+        name: tabItem.name,
         path: tabItem.path,
         close: tabItem.close
       }
