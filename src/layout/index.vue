@@ -25,7 +25,17 @@ import Menu from "./Menu/index.vue"
 import Header from "./Header/index.vue"
 import Tabs from "./Tabs/index.vue"
 import { TabsStore } from "@/store/modules/tabs"
+import { AuthButtonsStore } from "@/store/modules/authButtons"
+import { getAuthorButtons } from "@/api/userApi"
 const tabStore = TabsStore()
+
+const authButtonsStore = AuthButtonsStore()
+
+onMounted(async () => {
+  // 获取按钮权限列表
+  const res = await getAuthorButtons()
+  authButtonsStore.setAuthButtons(res.data)
+})
 </script>
 <style lang="scss" scoped>
 @import "./index.scss";

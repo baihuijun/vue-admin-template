@@ -1,3 +1,13 @@
+// * 设置 notification 层级在 loading 之上
+.el-notification {
+	z-index: 99999 !important;
+}
+
+// * 设置 message 层级在 loading 之上
+.el-message {
+	z-index: 99999 !important;
+}
+
 // * el-table 样式
 .table-box {
 	display: flex;
@@ -34,7 +44,6 @@
 			margin-left: 15px;
 			.search-isOpen {
 				margin-left: 20px;
-        user-select: none;
 			}
 		}
 	}
@@ -62,8 +71,6 @@
 			text-align: center;
 		}
 		.el-table__header th {
-			background: #fafafa;
-			color: #252525;
 			font-weight: bold;
 			font-size: 15px;
 			height: 50px;
@@ -84,6 +91,9 @@
 		.el-button--text {
 			height: 0;
 		}
+    .el-link {
+      margin-left: 12px;
+    }
 		// 解决表格空白样式不居中问题(仅在element-plus中)
 		.el-table__empty-block {
 			position: absolute;
@@ -108,5 +118,62 @@
 		display: flex;
 		margin: 23px 0 10px 0;
 		justify-content: flex-end;
+	}
+}
+
+// * el-drawer 样式
+.el-drawer {
+	// drawer header 样式
+	.el-drawer__header {
+		border-bottom: 1px solid #ebeef5;
+		padding: 15px 20px 14px 20px;
+		margin-bottom: 0px;
+		span {
+			font-size: 17px;
+			color: #303133;
+		}
+	}
+	// drawer body 样式（给 .el-form-item__label 每项后面添加：）
+	.el-drawer__body {
+		.el-form {
+			.el-form-item {
+				.el-form-item__label {
+					&::after {
+						content: " :";
+					}
+				}
+			}
+		}
+	}
+	// drawer header 样式
+	.el-drawer__footer {
+		border-top: 1px solid #ebeef5;
+	}
+	.el-select {
+		width: 100%;
+	}
+	// drawer-form 多列 form-item
+	.drawer-multiColumn-form {
+		display: flex;
+		flex-wrap: wrap;
+		.el-form-item {
+			width: 47%;
+			&:nth-child(2n-1) {
+				margin-right: 5%;
+			}
+		}
+	}
+}
+
+// * el-dialog 样式
+.el-dialog {
+	.el-dialog__header {
+		border-bottom: 1px solid #f0f0f0;
+		margin: 0;
+		padding: 15px 20px;
+		.el-dialog__title {
+			font-size: 17px;
+			color: #303133;
+		}
 	}
 }

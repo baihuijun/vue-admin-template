@@ -28,3 +28,20 @@ export function getUserTableList(data: any) {
     data
   })
 }
+
+// * 获取按钮权限
+export function getAuthorButtons() {
+  return http.request({
+    url: "/auth/buttons",
+    method: "GET"
+  })
+}
+
+// * 切换用户状态
+export function changeUserStatus(params: { id: string; status: number }) {
+  return http.request({
+    url: "/user/change",
+    method: "POST",
+    params
+  })
+}
