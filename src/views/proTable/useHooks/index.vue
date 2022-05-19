@@ -53,7 +53,7 @@
       <el-table-column prop="address" label="居住地址" :formatter="defaultFormat" show-overflow-tooltip></el-table-column>
       <el-table-column prop="createTime" label="创建时间" :formatter="defaultFormat" show-overflow-tooltip width="200"></el-table-column>
       <el-table-column prop="status" label="用户状态" width="180" v-slot="scope">
-        <el-switch :value="scope.row.status" :active-text="scope.row.status === 1 ? '启用' : '禁用'" :active-value="1" :inactive-value="0" @change="changeStatus($event, scope.row)" v-if="BUTTONS.status" />
+        <el-switch :value="scope.row.status" :active-text="scope.row.status === 1 ? '启用' : '禁用'" :active-value="1" :inactive-value="0" @change="changeStatus($event as number, scope.row)" v-if="BUTTONS.status" />
         <el-tag :type="scope.row.status === 1 ? 'success' : 'danger'" v-else> {{ scope.row.status === 1 ? "启用" : "禁用" }}</el-tag>
       </el-table-column>
       <el-table-column label="操作" fixed="right" width="320" v-slot="scope">
@@ -121,7 +121,7 @@ const downloadFile = () => {
   console.log("导出")
 }
 // 切换用户状态
-const changeStatus = async (val: number | string | boolean, params: any) => {
+const changeStatus = async (val: number, params: any) => {
   console.log(val)
   console.log(params)
   await useHandleData(changeUserStatus, { id: params.id, status: val }, `切换【${params.username}】用户状态`)

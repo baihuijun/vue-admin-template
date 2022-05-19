@@ -168,12 +168,25 @@
 // * el-dialog 样式
 .el-dialog {
 	.el-dialog__header {
-		border-bottom: 1px solid #f0f0f0;
+		border-bottom: 1px solid var(--el-border-color-light);
 		margin: 0;
 		padding: 15px 20px;
-		.el-dialog__title {
-			font-size: 17px;
-			color: #303133;
-		}
 	}
+  .el-dialog__headerbtn  {
+    top: 0px;
+    .el-dialog__close {
+      font-size: 25px;
+      transition: transform 0.5s;
+    }
+    .el-dialog__close:hover {
+      transform: rotate(90deg);
+    }
+  }
+  .el-dialog__body {
+    padding: var(--el-dialog-padding-primary);
+  }
+  .el-dialog__footer {
+    padding: calc(var(--el-dialog-padding-primary) - 5px);
+  }
+
 }

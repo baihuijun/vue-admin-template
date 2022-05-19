@@ -12,7 +12,7 @@
 
 module.exports = {
   // 超过最大值换行
-  printWidth: 300,
+  printWidth: 130,
   // 缩进字节数
   tabWidth: 2,
   // 使用制表符而不是空格缩进行
@@ -46,4 +46,4 @@ module.exports = {
   rangeEnd: Infinity,
   // Vue文件脚本和样式标签缩进
   vueIndentScriptAndStyle: false
-};
+}
