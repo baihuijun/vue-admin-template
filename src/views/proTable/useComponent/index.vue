@@ -62,8 +62,7 @@ import { ColumnProps } from "@/components/ProTable/interface"
 import { useHandleData } from "@/hooks/useHandleData"
 // import { useDownload } from "@/hooks/useDownload"
 import ProTable from "@/components/ProTable/index.vue"
-import ImportExcel from "@/components/ImportExcel/index.vue"
-import UserDrawer from "@/views/proTable/components/UserDrawer.vue"
+
 import { getUserTableList, changeUserStatus } from "@/api/userApi"
 import BaseDialog from "@/components/BaseDialog/index.vue"
 
