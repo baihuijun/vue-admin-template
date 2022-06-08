@@ -1,5 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios"
 import NProgress from "@/config/nprogress"
+import { GlobalStore } from "@/store"
+const globalStore = GlobalStore()
 class Axios {
   private instance
   constructor(config: AxiosRequestConfig) {
@@ -25,7 +27,8 @@ class Axios {
     this.instance.interceptors.request.use(
       config => {
         NProgress.start()
-        return config
+        const token: string = globalStore.token
+        return { ...config, headers: { "x-access-token": token } }
       },
       error => {
         return Promise.reject(error)

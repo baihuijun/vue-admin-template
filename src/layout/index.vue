@@ -1,3 +1,11 @@
+<!--
+ * @Author: baihuijun dreamerbai@163.com
+ * @Date: 2022-05-11 23:41:46
+ * @LastEditors: baihuijun dreamerbai@163.com
+ * @LastEditTime: 2022-05-27 17:55:06
+ * @FilePath: \template3\vue-admin-template\src\layout\index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <el-container>
     <el-aside><Menu></Menu></el-aside>

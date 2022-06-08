@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { GlobalStore } from "@/store"
-import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"
 // 配置element中英文
 import zhCn from "element-plus/lib/locale/lang/zh-cn"
 import en from "element-plus/lib/locale/lang/en"
@@ -13,23 +12,6 @@ const i18nLocale = computed((): any => {
   if (globalStore.language == "en") return en
   return ""
 })
-
-const theme = computed((): string => globalStore.theme)
-watch(
-  () => theme.value,
-  theme => {
-    const htmlDom = document.getElementsByTagName("html")
-    toggleTheme({
-      scopeName: theme
-    })
-    if (theme === "theme-dark") {
-      htmlDom[0].classList.add("dark")
-    } else {
-      htmlDom[0].classList.remove("dark")
-    }
-  },
-  { immediate: true }
-)
 </script>
 
 <template>

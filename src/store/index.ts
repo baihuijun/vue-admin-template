@@ -20,13 +20,8 @@ export const GlobalStore = defineStore({
     // language
     language: "",
     // theme
-    theme: "theme-default"
+    theme: "light"
   }),
-  getters: {
-    effect(state) {
-      return state.theme === "theme-default" ? "light" : "dark"
-    }
-  },
   actions: {
     // set token
     setToken(token: string) {

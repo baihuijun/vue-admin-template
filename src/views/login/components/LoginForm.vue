@@ -17,7 +17,9 @@
   </el-form>
   <div class="login-btn">
     <el-button :icon="CircleClose" round @click="resetForm(loginFormRef)" size="large">重置</el-button>
-    <el-button :icon="UserFilled" round @click="onlogin(loginFormRef)" size="large" type="primary" :loading="loading"> 登录 </el-button>
+    <el-button :icon="UserFilled" round @click="onlogin(loginFormRef)" size="large" type="primary" :loading="loading">
+      登录
+    </el-button>
   </div>
 </template>
 

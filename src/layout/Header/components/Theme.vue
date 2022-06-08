@@ -5,8 +5,12 @@
     </el-tooltip>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item :disabled="globalStore.effect === 'light'" command="theme-default">{{ $t("header.lightMode") }}</el-dropdown-item>
-        <el-dropdown-item :disabled="globalStore.effect === 'dark'" command="theme-dark">{{ $t("header.darkMode") }}</el-dropdown-item>
+        <el-dropdown-item :disabled="globalStore.theme === 'light'" command="light">
+          {{ $t("header.lightMode") }}
+        </el-dropdown-item>
+        <el-dropdown-item :disabled="globalStore.theme === 'dark'" command="dark">
+          {{ $t("header.darkMode") }}
+        </el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
@@ -14,9 +18,12 @@
 
 <script setup lang="ts">
 import { GlobalStore } from "@/store"
+import { useDark } from "@/hooks/useDark"
+const { switchTheme } = useDark()
 const globalStore = GlobalStore()
 const handleSetTheme = (scopeName: string) => {
   globalStore.setTheme(scopeName)
+  switchTheme()
 }
 </script>
 

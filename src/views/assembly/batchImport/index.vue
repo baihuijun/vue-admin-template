@@ -1,9 +1,14 @@
+<!--
+ * @Author: baihuijun dreamerbai@163.com
+ * @Date: 2022-05-20 13:19:31
+ * @LastEditors: bhj
+ * @LastEditTime: 2022-05-27 21:30:15
+ * @FilePath: \template3\vue-admin-template\src\views\assembly\batchImport\index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div class="batchImport flex flex-col">
     <div>常用组件</div>
-    <!-- <div>常用组件</div>
-    <div>常用组件</div>
-    <div>常用组件</div> -->
     <BaseTable :columns="columns" :requestApi="getUserTableList"></BaseTable>
   </div>
 </template>
