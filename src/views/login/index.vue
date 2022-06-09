@@ -1,5 +1,6 @@
 <template>
   <div class="login-container flx-center">
+    <BaseSwitchDark class="dark"></BaseSwitchDark>
     <div class="login-box">
       <div class="login-left">
         <img src="@/assets/images/login_left.svg" alt="" />
