@@ -2,7 +2,16 @@
   <div class="menu" :style="{ width: isCollapse ? '65px' : '220px' }">
     <Logo :isCollapse="isCollapse"></Logo>
     <el-scrollbar>
-      <el-menu :default-active="activeMenu" :router="true" :collapse="isCollapse" :collapse-transition="false" :unique-opened="true" background-color="#20222a" text-color="#bdbdc0" active-text-color="#fff">
+      <el-menu
+        :default-active="activeMenu"
+        :router="true"
+        :collapse="isCollapse"
+        :collapse-transition="false"
+        :unique-opened="true"
+        background-color="#20222a"
+        text-color="#bdbdc0"
+        active-text-color="#fff"
+      >
         <SubItem :menuList="menuList"></SubItem>
       </el-menu>
     </el-scrollbar>

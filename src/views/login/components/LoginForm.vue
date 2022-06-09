@@ -24,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from "vue"
 import { useRouter } from "vue-router"
 import { CircleClose, UserFilled } from "@element-plus/icons-vue"
 import type { ElForm } from "element-plus"
