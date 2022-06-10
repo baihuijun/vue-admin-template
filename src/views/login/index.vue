@@ -17,9 +17,9 @@
 </template>
 
 <script setup lang="ts" name="login">
-import LoginForm from "./components/LoginForm.vue"
+import LoginForm from './components/LoginForm.vue'
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

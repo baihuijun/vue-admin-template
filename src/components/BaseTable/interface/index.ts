@@ -1,7 +1,7 @@
 export namespace Table {
-  export type TypeProp = "index" | "selection" | "expand"
+  export type TypeProp = 'index' | 'selection' | 'expand'
 
-  export type FixedProp = "left" | "right"
+  export type FixedProp = 'left' | 'right'
 
   export interface ColumnProps {
     type: TypeProp // index | selection | expand（特殊类型）

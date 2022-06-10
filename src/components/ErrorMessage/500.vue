@@ -10,10 +10,10 @@
 </template>
 
 <script setup lang="ts">
-import { TabsStore } from "@/store/modules/tabs"
+import { TabsStore } from '@/store/modules/tabs'
 const tabStore = TabsStore()
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

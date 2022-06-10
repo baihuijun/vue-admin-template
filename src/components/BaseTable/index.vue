@@ -84,7 +84,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Table } from "./interface"
+import { Table } from './interface'
 
 interface ProTableProps {
   columns: Partial<Table.ColumnProps>[] // 列配置项
@@ -145,7 +145,7 @@ const pageParam = computed({
     }
   },
   set: (newVal: any) => {
-    console.log("我是分页更新之后的值", newVal)
+    console.log('我是分页更新之后的值', newVal)
   }
 })
 const getTableList = async () => {
@@ -219,7 +219,7 @@ const reset = () => {
 const selectedListIds = computed((): string[] => {
   let ids: string[] = []
   selectedList.value.forEach(item => {
-    ids.push(item["id"])
+    ids.push(item['id'])
   })
   return ids
 })

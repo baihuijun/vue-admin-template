@@ -1,4 +1,4 @@
-import { GlobalStore } from "@/store"
+import { GlobalStore } from '@/store'
 
 /**
  * @description 切换暗黑模式
@@ -9,8 +9,8 @@ export const useDark = () => {
 
   const switchTheme = () => {
     const body = document.documentElement as HTMLElement
-    if (themeConfig.value === "dark") body.setAttribute("class", "dark")
-    else body.setAttribute("class", "")
+    if (themeConfig.value === 'dark') body.setAttribute('class', 'dark')
+    else body.setAttribute('class', '')
   }
 
   onBeforeMount(() => {

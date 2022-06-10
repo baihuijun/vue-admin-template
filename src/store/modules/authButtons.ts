@@ -1,10 +1,10 @@
-import { defineStore } from "pinia"
-import { AuthButtonsState } from "../interface"
-import piniaPersistConfig from "@/config/piniaPersist"
+import { defineStore } from 'pinia'
+import { AuthButtonsState } from '../interface'
+import piniaPersistConfig from '@/config/piniaPersist'
 
 // MenuStore
 export const AuthButtonsStore = defineStore({
-  id: "AuthButtonsState",
+  id: 'AuthButtonsState',
   state: (): AuthButtonsState => ({
     // 用户按钮权限列表
     authorButtons: {}
@@ -20,5 +20,5 @@ export const AuthButtonsStore = defineStore({
       this.authorButtons = authorButtonList
     }
   },
-  persist: piniaPersistConfig("AuthButtonsState")
+  persist: piniaPersistConfig('AuthButtonsState')
 })

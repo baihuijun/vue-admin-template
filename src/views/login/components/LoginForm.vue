@@ -24,12 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router"
-import { CircleClose, UserFilled } from "@element-plus/icons-vue"
-import type { ElForm } from "element-plus"
-import { login } from "@/api/userApi"
-import { GlobalStore } from "@/store"
-import md5 from "js-md5"
+import { useRouter } from 'vue-router'
+import { CircleClose, UserFilled } from '@element-plus/icons-vue'
+import type { ElForm } from 'element-plus'
+import { login } from '@/api/userApi'
+import { GlobalStore } from '@/store'
+import md5 from 'js-md5'
 
 const globalStore = GlobalStore()
 
@@ -37,14 +37,14 @@ const globalStore = GlobalStore()
 type FormInstance = InstanceType<typeof ElForm>
 const loginFormRef = ref<FormInstance>()
 const loginRules = reactive({
-  username: [{ required: true, message: "请输入用户名", trigger: "blur" }],
-  password: [{ required: true, message: "请输入密码", trigger: "blur" }]
+  username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+  password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
 })
 
 // 登录表单数据
 const loginForm = reactive({
-  username: "admin",
-  password: "123456"
+  username: 'admin',
+  password: '123456'
 })
 const loading = ref<boolean>(false)
 
@@ -63,8 +63,8 @@ const onlogin = (formEl: FormInstance | undefined) => {
         const res = await login(requestLoginForm)
         globalStore.setToken(res.data!.access_token)
         // @ts-ignore # 忽视本行代码的小错误
-        ElMessage.success("登录成功!")
-        router.push({ name: "home" })
+        ElMessage.success('登录成功!')
+        router.push({ name: 'home' })
       } finally {
         loading.value = false
       }

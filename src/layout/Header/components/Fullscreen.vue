@@ -5,12 +5,12 @@
 </template>
 
 <script setup lang="ts">
-import { useFullscreen } from "@vueuse/core"
+import { useFullscreen } from '@vueuse/core'
 const { toggle, isFullscreen } = useFullscreen()
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
+@import '../index.scss';
 .icon-style {
   margin-right: 22px;
 }

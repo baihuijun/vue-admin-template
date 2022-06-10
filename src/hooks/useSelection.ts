@@ -1,4 +1,4 @@
-import { ref, computed } from "vue"
+import { ref, computed } from 'vue'
 
 /**
  * @description 表格多选数据操作
@@ -13,7 +13,7 @@ export const useSelection = () => {
   const selectedListIds = computed((): string[] => {
     let ids: string[] = []
     selectedList.value.forEach(item => {
-      ids.push(item["id"])
+      ids.push(item['id'])
     })
     return ids
   })

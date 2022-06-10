@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang="ts" name="colSetting">
-import { ref, nextTick } from "vue"
-import { ColumnProps } from "@/components/ProTable/interface"
+import { ref, nextTick } from 'vue'
+import { ColumnProps } from '@/components/ProTable/interface'
 
 const props = defineProps<{ colSetting: Partial<ColumnProps>[]; tableRef: any }>()
 

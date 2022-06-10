@@ -29,12 +29,12 @@
   </el-container>
 </template>
 <script lang="ts" setup>
-import Menu from "./Menu/index.vue"
-import Header from "./Header/index.vue"
-import Tabs from "./Tabs/index.vue"
-import { TabsStore } from "@/store/modules/tabs"
-import { AuthButtonsStore } from "@/store/modules/authButtons"
-import { getAuthorButtons } from "@/api/userApi"
+import Menu from './Menu/index.vue'
+import Header from './Header/index.vue'
+import Tabs from './Tabs/index.vue'
+import { TabsStore } from '@/store/modules/tabs'
+import { AuthButtonsStore } from '@/store/modules/authButtons'
+import { getAuthorButtons } from '@/api/userApi'
 const tabStore = TabsStore()
 
 const authButtonsStore = AuthButtonsStore()
@@ -46,5 +46,5 @@ onMounted(async () => {
 })
 </script>
 <style lang="scss" scoped>
-@import "./index.scss";
+@import './index.scss';
 </style>

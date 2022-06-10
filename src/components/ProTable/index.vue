@@ -106,14 +106,14 @@
 </template>
 
 <script setup lang="ts" name="proTable">
-import { ref, onMounted } from "vue"
-import { useTable } from "@/hooks/useTable"
-import { useSelection } from "@/hooks/useSelection"
-import { ColumnProps } from "@/components/ProTable/interface"
-import { filterEnum, defaultFormat } from "@/utils/util"
-import SearchForm from "@/components/SearchForm/index.vue"
-import Pagination from "@/components/Pagination/index.vue"
-import ColSetting from "./components/ColSetting.vue"
+import { ref, onMounted } from 'vue'
+import { useTable } from '@/hooks/useTable'
+import { useSelection } from '@/hooks/useSelection'
+import { ColumnProps } from '@/components/ProTable/interface'
+import { filterEnum, defaultFormat } from '@/utils/util'
+import SearchForm from '@/components/SearchForm/index.vue'
+import Pagination from '@/components/Pagination/index.vue'
+import ColSetting from './components/ColSetting.vue'
 
 const tableRef = ref()
 
@@ -139,7 +139,7 @@ const props = withDefaults(defineProps<ProTableProps>(), {
   border: true,
   stripe: false,
   toolButton: true,
-  childrenName: "children"
+  childrenName: 'children'
 })
 
 // 表格多选 Hooks
@@ -173,7 +173,7 @@ searchColumns.forEach(column => {
 const colRef = ref()
 // 过滤掉不需要设置显隐的列
 const colSetting = tableColumns.value.filter((item: Partial<ColumnProps>) => {
-  return item.type !== "selection" && item.type !== "index" && item.type !== "expand"
+  return item.type !== 'selection' && item.type !== 'index' && item.type !== 'expand'
 })
 const openColSetting = () => {
   colRef.value.openColSetting()

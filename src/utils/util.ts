@@ -1,5 +1,5 @@
-import { isArray } from "@/utils/is"
-import { TableColumnCtx } from "element-plus/es/components/table/src/table-column/defaults"
+import { isArray } from '@/utils/is'
+import { TableColumnCtx } from 'element-plus/es/components/table/src/table-column/defaults'
 
 /**
  * @description 获取localStorage
@@ -53,7 +53,7 @@ export function deepCopy<T>(obj: any): T {
     newObj = {}
   }
   for (let attr in obj) {
-    if (typeof obj[attr] === "object") {
+    if (typeof obj[attr] === 'object') {
       newObj[attr] = deepCopy(obj[attr])
     } else {
       newObj[attr] = obj[attr]
@@ -68,8 +68,8 @@ export function deepCopy<T>(obj: any): T {
  * @returns {string} 数据类型
  */
 export function isType(val: any) {
-  if (val === null) return "null"
-  if (typeof val !== "object") return typeof val
+  if (val === null) return 'null'
+  if (typeof val !== 'object') return typeof val
   else return Object.prototype.toString.call(val).slice(8, -1).toLocaleLowerCase()
 }
 
@@ -106,11 +106,11 @@ export function randomNum(min: number, max: number): number {
  */
 export function getBrowserLang() {
   let browserLang = navigator.language ? navigator.language : navigator.browserLanguage
-  let defaultBrowserLang = ""
-  if (browserLang.toLowerCase() === "cn" || browserLang.toLowerCase() === "zh" || browserLang.toLowerCase() === "zh-cn") {
-    defaultBrowserLang = "zh"
+  let defaultBrowserLang = ''
+  if (browserLang.toLowerCase() === 'cn' || browserLang.toLowerCase() === 'zh' || browserLang.toLowerCase() === 'zh-cn') {
+    defaultBrowserLang = 'zh'
   } else {
-    defaultBrowserLang = "en"
+    defaultBrowserLang = 'en'
   }
   return defaultBrowserLang
 }
@@ -124,8 +124,8 @@ export function getBrowserLang() {
  * */
 export function defaultFormat(row: number, col: TableColumnCtx<any> | number, callValue: any) {
   // 如果当前值为数组,使用 / 拼接（根据需求自定义）
-  if (isArray(callValue)) return callValue.length ? callValue.join(" / ") : "--"
-  return callValue ?? "--"
+  if (isArray(callValue)) return callValue.length ? callValue.join(' / ') : '--'
+  return callValue ?? '--'
 }
 
 /**
@@ -137,6 +137,6 @@ export function defaultFormat(row: number, col: TableColumnCtx<any> | number, ca
  * */
 export function filterEnum(callValue: any, enumData: any[] = [], type?: string): any {
   let filterData = enumData.find(item => item.value === callValue)
-  if (type == "tag") return filterData?.tagType ? filterData.tagType : ""
-  return filterData ? filterData.label : "--"
+  if (type == 'tag') return filterData?.tagType ? filterData.tagType : ''
+  return filterData ? filterData.label : '--'
 }

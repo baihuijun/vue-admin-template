@@ -47,22 +47,22 @@
 
 <script setup lang="ts" name="basicForm">
 const formData = reactive({
-  name: "",
-  region: "",
-  date1: "",
-  date2: "",
+  name: '',
+  region: '',
+  date1: '',
+  date2: '',
   delivery: false,
   type: [],
-  resource: "",
-  desc: ""
+  resource: '',
+  desc: ''
 })
 
 const onSubmit = () => {
   // @ts-ignore # 忽视本行代码的小错误
-  ElMessage.success("提交的数据为 : " + JSON.stringify(formData))
+  ElMessage.success('提交的数据为 : ' + JSON.stringify(formData))
 }
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

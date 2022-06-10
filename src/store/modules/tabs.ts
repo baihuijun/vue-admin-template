@@ -1,15 +1,15 @@
-import { defineStore } from "pinia"
-import { TabPaneProps } from "element-plus"
-import { TabsState } from "../interface"
-import piniaPersistConfig from "@/config/piniaPersist"
-import { HOME_URL, TABS_BLACK_LIST } from "@/config/config"
-import router from "@/routers/index"
-import cacheRouter from "@/routers/cacheRouter"
+import { defineStore } from 'pinia'
+import { TabPaneProps } from 'element-plus'
+import { TabsState } from '../interface'
+import piniaPersistConfig from '@/config/piniaPersist'
+import { HOME_URL, TABS_BLACK_LIST } from '@/config/config'
+import router from '@/routers/index'
+import cacheRouter from '@/routers/cacheRouter'
 export const TabsStore = defineStore({
-  id: "TabsState",
+  id: 'TabsState',
   state: (): TabsState => ({
     tabsMenuValue: HOME_URL,
-    tabsMenuList: [{ title: "首页", name: "home", path: HOME_URL, icon: "home-filled", close: false }]
+    tabsMenuList: [{ title: '首页', name: 'home', path: HOME_URL, icon: 'home-filled', close: false }]
   }),
   getters: {
     curCacheRoute(state) {
@@ -76,5 +76,5 @@ export const TabsStore = defineStore({
       this.tabsMenuValue = HOME_URL
     }
   },
-  persist: piniaPersistConfig("TabsState")
+  persist: piniaPersistConfig('TabsState')
 })

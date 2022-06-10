@@ -117,20 +117,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, reactive, onMounted, onBeforeUnmount } from "vue"
-import { HOME_URL } from "@/config/config"
-import { randomNum } from "@/utils/util"
-import { useRouter } from "vue-router"
-import { useTime } from "@/hooks/useTime"
-import { ECharts } from "echarts"
-import mapChart from "./components/chinaMapChart.vue"
-import AgeRatioChart from "./components/AgeRatioChart.vue"
-import AnnualUseChart from "./components/AnnualUseChart.vue"
-import HotPlateChart from "./components/HotPlateChart.vue"
-import MaleFemaleRatioChart from "./components/MaleFemaleRatioChart.vue"
-import OverNext30Chart from "./components/OverNext30Chart.vue"
-import PlatformSourceChart from "./components/PlatformSourceChart.vue"
-import RealTimeAccessChart from "./components/RealTimeAccessChart.vue"
+import { ref, Ref, reactive, onMounted, onBeforeUnmount } from 'vue'
+import { HOME_URL } from '@/config/config'
+import { randomNum } from '@/utils/util'
+import { useRouter } from 'vue-router'
+import { useTime } from '@/hooks/useTime'
+import { ECharts } from 'echarts'
+import mapChart from './components/chinaMapChart.vue'
+import AgeRatioChart from './components/AgeRatioChart.vue'
+import AnnualUseChart from './components/AnnualUseChart.vue'
+import HotPlateChart from './components/HotPlateChart.vue'
+import MaleFemaleRatioChart from './components/MaleFemaleRatioChart.vue'
+import OverNext30Chart from './components/OverNext30Chart.vue'
+import PlatformSourceChart from './components/PlatformSourceChart.vue'
+import RealTimeAccessChart from './components/RealTimeAccessChart.vue'
 // import { Vue3SeamlessScroll } from "vue3-seamless-scroll";
 /* 引入警告数据 */
 // import alarmList from "./assets/alarmList.json";
@@ -147,7 +147,7 @@ onMounted(() => {
   /* 初始化echarts */
   initCharts()
   // 为浏览器绑定事件
-  window.addEventListener("resize", resize)
+  window.addEventListener('resize', resize)
 })
 
 /* 声明echarts实例 */
@@ -180,163 +180,163 @@ const MapchartRef = ref<ChartExpose>()
 let ageData = [
   {
     value: 200,
-    name: "10岁以下",
-    percentage: "16%"
+    name: '10岁以下',
+    percentage: '16%'
   },
   {
     value: 110,
-    name: "10 - 18岁",
-    percentage: "8%"
+    name: '10 - 18岁',
+    percentage: '8%'
   },
   {
     value: 150,
-    name: "18 - 30岁",
-    percentage: "12%"
+    name: '18 - 30岁',
+    percentage: '12%'
   },
   {
     value: 310,
-    name: "30 - 40岁",
-    percentage: "24%"
+    name: '30 - 40岁',
+    percentage: '24%'
   },
   {
     value: 250,
-    name: "40 - 60岁",
-    percentage: "20%"
+    name: '40 - 60岁',
+    percentage: '20%'
   },
   {
     value: 260,
-    name: "60岁以上",
-    percentage: "20%"
+    name: '60岁以上',
+    percentage: '20%'
   }
 ]
 let hotData = [
   {
     value: 79999,
-    name: "峨眉山",
-    percentage: "80%",
+    name: '峨眉山',
+    percentage: '80%',
     maxValue: 100000
   },
   {
     value: 59999,
-    name: "稻城亚丁",
-    percentage: "60%",
+    name: '稻城亚丁',
+    percentage: '60%',
     maxValue: 100000
   },
   {
     value: 49999,
-    name: "九寨沟",
-    percentage: "50%",
+    name: '九寨沟',
+    percentage: '50%',
     maxValue: 100000
   },
   {
     value: 39999,
-    name: "万里长城",
-    percentage: "40%",
+    name: '万里长城',
+    percentage: '40%',
     maxValue: 100000
   },
   {
     value: 29999,
-    name: "北京故宫",
-    percentage: "30%",
+    name: '北京故宫',
+    percentage: '30%',
     maxValue: 100000
   }
 ]
 let platFromData = [
   {
     value: 40,
-    name: "智慧文旅平台",
-    percentage: "40%"
+    name: '智慧文旅平台',
+    percentage: '40%'
   },
   {
     value: 10,
-    name: "携程",
-    percentage: "10%"
+    name: '携程',
+    percentage: '10%'
   },
   {
     value: 20,
-    name: "飞猪",
-    percentage: "20%"
+    name: '飞猪',
+    percentage: '20%'
   },
   {
     value: 30,
-    name: "其他渠道",
-    percentage: "30%"
+    name: '其他渠道',
+    percentage: '30%'
   }
 ]
 let annualData = [
   {
-    label: new Date().getFullYear() - 2 + "年",
-    value: ["184", "90", "120", "0", "30", "100", "80", "40", "20", "510", "350", "180"]
+    label: new Date().getFullYear() - 2 + '年',
+    value: ['184', '90', '120', '0', '30', '100', '80', '40', '20', '510', '350', '180']
   },
   {
-    label: new Date().getFullYear() - 1 + "年",
-    value: ["118", "509", "366", "162", "380", "123", "321", "158", "352", "474", "154", "22"]
+    label: new Date().getFullYear() - 1 + '年',
+    value: ['118', '509', '366', '162', '380', '123', '321', '158', '352', '474', '154', '22']
   },
   {
-    label: new Date().getFullYear() + "年",
-    value: ["548", "259", "113", "90", "69", "512", "23", "49", "28", "420", "313", "156"]
+    label: new Date().getFullYear() + '年',
+    value: ['548', '259', '113', '90', '69', '512', '23', '49', '28', '420', '313', '156']
   }
 ]
 let mapData = [
   {
-    fromName: "北京",
-    toName: "上海",
+    fromName: '北京',
+    toName: '上海',
     coords: [
       [116.4551, 40.2539],
       [121.4648, 31.2891]
     ]
   },
   {
-    fromName: "上海",
-    toName: "北京",
+    fromName: '上海',
+    toName: '北京',
     coords: [
       [121.4648, 31.2891],
       [116.4551, 40.2539]
     ]
   },
   {
-    fromName: "北京",
-    toName: "广州",
+    fromName: '北京',
+    toName: '广州',
     coords: [
       [116.4551, 40.2539],
       [113.5107, 23.2196]
     ]
   },
   {
-    fromName: "广州",
-    toName: "北京",
+    fromName: '广州',
+    toName: '北京',
     coords: [
       [113.5107, 23.2196],
       [116.4551, 40.2539]
     ]
   },
   {
-    fromName: "北京",
-    toName: "成都",
+    fromName: '北京',
+    toName: '成都',
     coords: [
       [116.4551, 40.2539],
       [103.9526, 30.7617]
     ]
   },
   {
-    fromName: "成都",
-    toName: "北京",
+    fromName: '成都',
+    toName: '北京',
     coords: [
       [103.9526, 30.7617],
       [116.4551, 40.2539]
     ]
   },
   {
-    fromName: "成都",
-    toName: "新疆维吾尔自治区",
+    fromName: '成都',
+    toName: '新疆维吾尔自治区',
     coords: [
       [103.9526, 30.7617],
       [85.294711, 41.371801]
     ]
   },
   {
-    fromName: " 新疆维吾尔自治区",
-    toName: "成都",
+    fromName: ' 新疆维吾尔自治区',
+    toName: '成都',
     coords: [
       [85.294711, 41.371801],
       [103.9526, 30.7617]
@@ -351,27 +351,27 @@ const initCharts = (): void => {
   dataScreen.chart3 = AnnualUseRef.value?.initChart({
     data: annualData,
     unit: annualData.map(val => val.label),
-    columns: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-    colors: ["#FFA600", "#007AFE", "#FF4B7A"]
+    columns: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    colors: ['#FFA600', '#007AFE', '#FF4B7A']
   }) as ECharts
   dataScreen.chart4 = HotPlateRef.value?.initChart({
     data: hotData,
-    colors: ["#1089E7", "#F57474", "#56D0E3", "#F8B448", "#8B78F6"]
+    colors: ['#1089E7', '#F57474', '#56D0E3', '#F8B448', '#8B78F6']
   }) as ECharts
   dataScreen.chart5 = MaleFemaleRatioRef.value?.initChart({
     man: 0.6,
     woman: 0.4
   }) as ECharts
   dataScreen.chart6 = OverNext30Ref.value?.initChart({
-    unit: ["访问量"],
-    data: new Array(30).fill("").map(val => {
+    unit: ['访问量'],
+    data: new Array(30).fill('').map(val => {
       val = randomNum(1, 20000)
       return val
     })
   }) as ECharts
   dataScreen.chart7 = PlatformSourceRef.value?.initChart({
     data: platFromData,
-    colors: ["#078dbc", "#6ad40b", "#6172fc", "#1786ff", "#ffbe2f", "#4dc89d", "#b797df", "#ffd3aa"]
+    colors: ['#078dbc', '#6ad40b', '#6172fc', '#1786ff', '#ffbe2f', '#4dc89d', '#b797df', '#ffd3aa']
   }) as ECharts
   dataScreen.mapChart = MapchartRef.value?.initChart(mapData) as ECharts
 }
@@ -418,7 +418,7 @@ const handleTo = (): void => {
 
 /* 销毁时触发 */
 onBeforeUnmount(() => {
-  window.removeEventListener("resize", resize)
+  window.removeEventListener('resize', resize)
   clearInterval(timer)
   // 每次离开页面时，清空echarts实例，不然会出现无法显示的问题
   Object.values(dataScreen).forEach(val => {
@@ -427,5 +427,5 @@ onBeforeUnmount(() => {
 })
 </script>
 <style lang="scss" scoped>
-@import "./index.scss";
+@import './index.scss';
 </style>

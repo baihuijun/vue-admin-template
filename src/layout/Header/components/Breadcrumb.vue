@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
-import { useRoute } from "vue-router"
-import { ArrowRight } from "@element-plus/icons-vue"
-import { HOME_URL } from "@/config/config"
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { ArrowRight } from '@element-plus/icons-vue'
+import { HOME_URL } from '@/config/config'
 const route = useRoute()
 
-const matched = computed(() => route.matched.filter(item => item.meta && item.meta.title && item.meta.title !== "首页"))
+const matched = computed(() => route.matched.filter(item => item.meta && item.meta.title && item.meta.title !== '首页'))
 </script>

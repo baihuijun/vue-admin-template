@@ -1,10 +1,10 @@
-import { defineStore } from "pinia"
-import { MenuState } from "../interface"
-import piniaPersistConfig from "@/config/piniaPersist"
+import { defineStore } from 'pinia'
+import { MenuState } from '../interface'
+import piniaPersistConfig from '@/config/piniaPersist'
 
 // MenuStore
 export const MenuStore = defineStore({
-  id: "MenuState",
+  id: 'MenuState',
   state: (): MenuState => ({
     // menu collapse
     isCollapse: false,
@@ -20,5 +20,5 @@ export const MenuStore = defineStore({
       this.menuList = menuList
     }
   },
-  persist: piniaPersistConfig("MenuState")
+  persist: piniaPersistConfig('MenuState')
 })

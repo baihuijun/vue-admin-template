@@ -1,8 +1,8 @@
-import { defineStore } from "pinia"
-import { store } from "@/store"
+import { defineStore } from 'pinia'
+import { store } from '@/store'
 // import { ascending, filterTree } from "@/routers/utils"
 export const usePermissionStore = defineStore({
-  id: "permission",
+  id: 'permission',
   state: () => ({
     // 静态路由生成的菜单
     // constantMenus,

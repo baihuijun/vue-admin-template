@@ -1,8 +1,8 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
-import pack from "../../package.json"
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import pack from '../../package.json'
 
 // * 导入所有modules里面的router
-const metaRouters = import.meta.globEager("./modules/*.ts")
+const metaRouters = import.meta.globEager('./modules/*.ts')
 // * 处理路由
 export const routerArray: RouteRecordRaw[] = []
 Object.entries(metaRouters).forEach(([, module]) => {
@@ -11,24 +11,24 @@ Object.entries(metaRouters).forEach(([, module]) => {
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
-    redirect: { name: "login" }
+    path: '/',
+    redirect: { name: 'login' }
   },
   {
-    path: "/login",
-    name: "login",
-    component: () => import("@/views/login/index.vue"),
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login/index.vue'),
     meta: {
       requiresAuth: false,
-      title: "登录页",
-      key: "login"
+      title: '登录页',
+      key: 'login'
     }
   },
   ...routerArray,
   {
     // 找不到路由重定向到404页面
-    path: "/:pathMatch(.*)",
-    redirect: { name: "404" }
+    path: '/:pathMatch(.*)',
+    redirect: { name: '404' }
   }
 ]
 

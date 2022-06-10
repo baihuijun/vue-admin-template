@@ -55,16 +55,16 @@
 </template>
 
 <script setup lang="ts" name="useComponent">
-import { ref, reactive } from "vue"
-import { genderType } from "@/utils/serviceDict"
+import { ref, reactive } from 'vue'
+import { genderType } from '@/utils/serviceDict'
 // import { User } from "@/api/interface"
-import { ColumnProps } from "@/components/ProTable/interface"
-import { useHandleData } from "@/hooks/useHandleData"
+import { ColumnProps } from '@/components/ProTable/interface'
+import { useHandleData } from '@/hooks/useHandleData'
 // import { useDownload } from "@/hooks/useDownload"
-import ProTable from "@/components/ProTable/index.vue"
+import ProTable from '@/components/ProTable/index.vue'
 
-import { getUserTableList, changeUserStatus } from "@/api/userApi"
-import BaseDialog from "@/components/BaseDialog/index.vue"
+import { getUserTableList, changeUserStatus } from '@/api/userApi'
+import BaseDialog from '@/components/BaseDialog/index.vue'
 
 // 获取 ProTable 元素，调用其获取刷新数据方法（还能获取到当前查询参数，方便导出携带参数）
 const proTable = ref()
@@ -76,75 +76,75 @@ const dialogVisible = ref<boolean>(false)
 // 配置项
 const columns: Partial<ColumnProps>[] = [
   {
-    type: "selection",
+    type: 'selection',
     width: 80,
-    fixed: "left"
+    fixed: 'left'
   },
   {
-    type: "index",
-    label: "#",
+    type: 'index',
+    label: '#',
     width: 80
   },
   {
-    type: "expand",
-    label: "Expand",
+    type: 'expand',
+    label: 'Expand',
     width: 120
   },
   {
-    prop: "username",
-    label: "用户姓名",
+    prop: 'username',
+    label: '用户姓名',
     search: true
   },
   {
-    prop: "gender",
-    label: "性别",
-    width: "140",
+    prop: 'gender',
+    label: '性别',
+    width: '140',
     enum: genderType,
     search: true,
     sortable: true,
-    searchType: "select"
+    searchType: 'select'
   },
   {
-    prop: "idCard",
-    label: "身份证号",
+    prop: 'idCard',
+    label: '身份证号',
     search: true
   },
   {
-    prop: "email",
-    label: "邮箱",
+    prop: 'email',
+    label: '邮箱',
     search: true
   },
   {
-    prop: "address",
-    label: "居住地址",
+    prop: 'address',
+    label: '居住地址',
     search: true
   },
   {
-    prop: "createTime",
-    label: "创建时间",
+    prop: 'createTime',
+    label: '创建时间',
     width: 200,
     sortable: true,
     search: true,
-    searchType: "datetimerange",
-    initSearchParam: ["2022-04-05 00:00:00", "2022-05-10 23:59:59"]
+    searchType: 'datetimerange',
+    initSearchParam: ['2022-04-05 00:00:00', '2022-05-10 23:59:59']
   },
   {
-    prop: "status",
-    label: "用户状态",
+    prop: 'status',
+    label: '用户状态',
     sortable: true,
     width: 180
   },
   {
-    prop: "avatar",
-    label: "头像",
+    prop: 'avatar',
+    label: '头像',
     width: 140,
     image: true
   },
   {
-    prop: "operation",
-    label: "操作",
+    prop: 'operation',
+    label: '操作',
     width: 330,
-    fixed: "right"
+    fixed: 'right'
   }
 ]
 const handleCancel = (falg: boolean) => {

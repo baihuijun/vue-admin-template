@@ -1,5 +1,5 @@
-import { Table } from "./interface"
-import { reactive, computed, toRefs } from "vue"
+import { Table } from './interface'
+import { reactive, computed, toRefs } from 'vue'
 
 /**
  * @description table 页面操作方法封装
@@ -42,7 +42,7 @@ export const useTable = (apiUrl: (params: any) => Promise<any>, initParam: any =
       }
     },
     set: (newVal: any) => {
-      console.log("我是分页更新之后的值", newVal)
+      console.log('我是分页更新之后的值', newVal)
     }
   })
 

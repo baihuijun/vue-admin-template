@@ -6,10 +6,10 @@
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :disabled="globalStore.theme === 'light'" command="light">
-          {{ $t("header.lightMode") }}
+          {{ $t('header.lightMode') }}
         </el-dropdown-item>
         <el-dropdown-item :disabled="globalStore.theme === 'dark'" command="dark">
-          {{ $t("header.darkMode") }}
+          {{ $t('header.darkMode') }}
         </el-dropdown-item>
       </el-dropdown-menu>
     </template>
@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import { GlobalStore } from "@/store"
-import { useDark } from "@/hooks/useDark"
+import { GlobalStore } from '@/store'
+import { useDark } from '@/hooks/useDark'
 const { switchTheme } = useDark()
 const globalStore = GlobalStore()
 const handleSetTheme = (scopeName: string) => {
@@ -28,5 +28,5 @@ const handleSetTheme = (scopeName: string) => {
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
+@import '../index.scss';
 </style>

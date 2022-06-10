@@ -1,26 +1,26 @@
-import type { App } from "vue"
-import { defineStore } from "pinia"
-import { GlobalState } from "./interface"
-import { createPinia } from "pinia"
-import piniaPersist from "pinia-plugin-persist"
-import piniaPersistConfig from "@/config/piniaPersist"
+import type { App } from 'vue'
+import { defineStore } from 'pinia'
+import { GlobalState } from './interface'
+import { createPinia } from 'pinia'
+import piniaPersist from 'pinia-plugin-persist'
+import piniaPersistConfig from '@/config/piniaPersist'
 
 // defineStore 调用后返回一个函数，调用该函数获得 Store 实体
 export const GlobalStore = defineStore({
   // id: 必须的，在所有 Store 中唯一
-  id: "GlobalState",
+  id: 'GlobalState',
   // state: 返回对象的函数
   state: (): GlobalState => ({
     // Token
-    token: "",
+    token: '',
     // userInfo
-    userInfo: "",
+    userInfo: '',
     // element组件大小
-    assemblySize: "default",
+    assemblySize: 'default',
     // language
-    language: "",
+    language: '',
     // theme
-    theme: "light"
+    theme: 'light'
   }),
   actions: {
     // set token
@@ -44,7 +44,7 @@ export const GlobalStore = defineStore({
       this.theme = theme
     }
   },
-  persist: piniaPersistConfig("GlobalState")
+  persist: piniaPersistConfig('GlobalState')
 })
 
 const store = createPinia()

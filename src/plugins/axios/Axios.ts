@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig } from "axios"
-import { GlobalStore } from "@/store"
+import axios, { AxiosRequestConfig } from 'axios'
+import { GlobalStore } from '@/store'
 const globalStore = GlobalStore()
 class Axios {
   private instance
@@ -26,7 +26,7 @@ class Axios {
     this.instance.interceptors.request.use(
       config => {
         const token: string = globalStore.token
-        return { ...config, headers: { "x-access-token": token } }
+        return { ...config, headers: { 'x-access-token': token } }
       },
       error => {
         return Promise.reject(error)

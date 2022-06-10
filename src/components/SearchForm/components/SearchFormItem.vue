@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts" name="searchFormItem">
-import { ColumnProps } from "@/components/ProTable/interface"
+import { ColumnProps } from '@/components/ProTable/interface'
 
 interface SearchFormItem {
   item: Partial<ColumnProps> // 具体每一个搜索项的配置

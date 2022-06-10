@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts" setup>
-import { GlobalStore } from "@/store"
-import { useDark } from "@/hooks/useDark"
+import { GlobalStore } from '@/store'
+import { useDark } from '@/hooks/useDark'
 const { switchTheme } = useDark()
 const globalStore = GlobalStore()
 const theme = computed({

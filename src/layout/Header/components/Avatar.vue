@@ -5,9 +5,9 @@
     </div>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item @click="openDialog('infoRef')">{{ $t("header.personalData") }}</el-dropdown-item>
-        <el-dropdown-item @click="openDialog('passwordRef')">{{ $t("header.changePassword") }}</el-dropdown-item>
-        <el-dropdown-item @click="logout" divided>{{ $t("header.logout") }}</el-dropdown-item>
+        <el-dropdown-item @click="openDialog('infoRef')">{{ $t('header.personalData') }}</el-dropdown-item>
+        <el-dropdown-item @click="openDialog('passwordRef')">{{ $t('header.changePassword') }}</el-dropdown-item>
+        <el-dropdown-item @click="logout" divided>{{ $t('header.logout') }}</el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
@@ -19,10 +19,10 @@ const openDialog = (refName: string) => {
   console.log(refName)
 }
 const logout = () => {
-  router.push("/login")
+  router.push('/login')
 }
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
+@import '../index.scss';
 </style>

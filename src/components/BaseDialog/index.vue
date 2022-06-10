@@ -28,22 +28,22 @@ interface BaseDialogProps {
   submitBtn?: string
   closeOnClickModal?: boolean
 }
-const $emit = defineEmits(["cancel", "submit"])
+const $emit = defineEmits(['cancel', 'submit'])
 const props = withDefaults(defineProps<BaseDialogProps>(), {
   visible: false,
-  title: "Tips",
+  title: 'Tips',
   draggable: true,
-  cancelBtn: "关闭",
-  submitBtn: "提交",
+  cancelBtn: '关闭',
+  submitBtn: '提交',
   closeOnClickModal: false
 })
 const cancel = () => {
-  console.log("关闭")
-  $emit("cancel", false)
+  console.log('关闭')
+  $emit('cancel', false)
 }
 const submit = () => {
-  console.log("提交")
-  $emit("submit", false)
+  console.log('提交')
+  $emit('submit', false)
 }
 onMounted(() => {})
 </script>

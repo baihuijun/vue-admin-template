@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from "vue"
-import { useI18n } from "vue-i18n"
-import { GlobalStore } from "@/store"
-import { getBrowserLang } from "@/utils"
+import { computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { GlobalStore } from '@/store'
+import { getBrowserLang } from '@/utils'
 const i18n = useI18n()
 const globalStore = GlobalStore()
 
@@ -33,5 +33,5 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
+@import '../index.scss';
 </style>

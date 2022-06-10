@@ -19,12 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue"
-import { useRoute } from "vue-router"
-import { MenuStore } from "@/store/modules/menu"
-import Logo from "./components/Logo.vue"
-import SubItem from "./components/SubItem.vue"
-import { getMenuList } from "@/api/userApi"
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { MenuStore } from '@/store/modules/menu'
+import Logo from './components/Logo.vue'
+import SubItem from './components/SubItem.vue'
+import { getMenuList } from '@/api/userApi'
 
 const route = useRoute()
 const menuStore = MenuStore()
@@ -56,5 +56,5 @@ listeningWindow()
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

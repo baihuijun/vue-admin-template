@@ -1,36 +1,36 @@
-import { RouteRecordRaw } from "vue-router"
-import { Layout } from "@/routers/constant"
+import { RouteRecordRaw } from 'vue-router'
+import { Layout } from '@/routers/constant'
 
 // 超级表格模块
 const proTableRouter: Array<RouteRecordRaw> = [
   {
-    path: "/proTable",
+    path: '/proTable',
     component: Layout,
-    redirect: "/proTable/useHooks",
+    redirect: '/proTable/useHooks',
     meta: {
-      title: "超级表格"
+      title: '超级表格'
     },
     children: [
       {
-        path: "/proTable/useHooks",
-        name: "useHooks",
-        component: () => import("@/views/proTable/useHooks/index.vue"),
+        path: '/proTable/useHooks',
+        name: 'useHooks',
+        component: () => import('@/views/proTable/useHooks/index.vue'),
         meta: {
           keepAlive: true,
           requiresAuth: true,
-          title: "使用 Hooks",
-          key: "useHooks"
+          title: '使用 Hooks',
+          key: 'useHooks'
         }
       },
       {
-        path: "/proTable/useComponent",
-        name: "useComponent",
-        component: () => import("@/views/proTable/useComponent/index.vue"),
+        path: '/proTable/useComponent',
+        name: 'useComponent',
+        component: () => import('@/views/proTable/useComponent/index.vue'),
         meta: {
           keepAlive: true,
           requiresAuth: true,
-          title: "使用 Component",
-          key: "useComponent"
+          title: '使用 Component',
+          key: 'useComponent'
         }
       }
     ]

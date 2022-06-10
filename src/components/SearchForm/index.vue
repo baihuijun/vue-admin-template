@@ -11,7 +11,7 @@
       <el-button type="primary" icon="Search" @click="search">搜索</el-button>
       <el-button icon="Delete" @click="reset">重置</el-button>
       <el-link type="primary" class="search-isOpen" @click="searchShow = !searchShow">
-        {{ searchShow ? "收起" : "展开" }}
+        {{ searchShow ? '收起' : '展开' }}
         <el-icon class="el-icon--right"> <component :is="searchShow ? 'ArrowUp' : 'ArrowDown'"></component> </el-icon
       ></el-link>
     </div>
@@ -19,9 +19,9 @@
 </template>
 
 <script setup lang="ts" name="searchForm">
-import { ref, computed, onMounted } from "vue"
-import { ColumnProps } from "@/components/ProTable/interface"
-import SearchFormItem from "./components/SearchFormItem.vue"
+import { ref, computed, onMounted } from 'vue'
+import { ColumnProps } from '@/components/ProTable/interface'
+import SearchFormItem from './components/SearchFormItem.vue'
 
 interface ProTableProps {
   columns: Partial<ColumnProps>[] // 搜索配置列
@@ -41,9 +41,9 @@ const maxWidth = ref<number>(1260)
 onMounted(() => {
   // * 暂时只判断这两种情况（第四个搜索项为时间范围 || 前三项存在时间范围选择框）
   if (props.columns.length >= 4) {
-    props.columns[3].searchType == "datetimerange" ? ((maxWidth.value = 945), (maxLength.value = 3)) : null
+    props.columns[3].searchType == 'datetimerange' ? ((maxWidth.value = 945), (maxLength.value = 3)) : null
     props.columns.slice(0, 3).forEach(item => {
-      item.searchType === "datetimerange" ? ((maxWidth.value = 1135), (maxLength.value = 3)) : null
+      item.searchType === 'datetimerange' ? ((maxWidth.value = 1135), (maxLength.value = 3)) : null
     })
   }
 })
